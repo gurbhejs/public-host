@@ -1,0 +1,3718 @@
+#region Assembly SolidWorks.Interop.sldworks, Version=32.1.0.123, Culture=neutral, PublicKeyToken=7c4797c3e4eeac03
+// C:\Users\singh\.nuget\packages\solidworks.interop.sldworks\32.1.0\lib\netstandard2.0\SolidWorks.Interop.sldworks.dll
+// Decompiled with ICSharpCode.Decompiler 8.1.1.7464
+#endregion
+
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace SolidWorks.Interop.sldworks;
+
+[ComImport]
+[TypeLibType(TypeLibTypeFlags.FHidden | TypeLibTypeFlags.FDual | TypeLibTypeFlags.FDispatchable)]
+[Guid("B90793FB-EF3D-4B80-A5C4-99959CDB6CEB")]
+public interface IModelDoc2
+{
+    [DispId(65537)]
+    object SelectionManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65537)]
+        [return: MarshalAs(UnmanagedType.IDispatch)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65537)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.IDispatch)]
+        set;
+    }
+
+    [DispId(65711)]
+    SelectionMgr ISelectionManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65711)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [DispId(65538)]
+    object ActiveView
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65538)]
+        [return: MarshalAs(UnmanagedType.IDispatch)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65538)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.IDispatch)]
+        set;
+    }
+
+    [DispId(65712)]
+    ModelView IActiveView
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65712)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [DispId(65539)]
+    int LengthUnit
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65539)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65539)]
+        [param: In]
+        set;
+    }
+
+    [DispId(65716)]
+    string LightSourceUserName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65716)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65716)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(65717)]
+    object LightSourcePropertyValues
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65717)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65717)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.Struct)]
+        set;
+    }
+
+    [DispId(65718)]
+    string SceneName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65718)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65718)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(65719)]
+    string SceneUserName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65719)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65719)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65540)]
+    void FeatureFillet([In] double R1, [In] bool Propagate, [In] bool Ftyp, [In] bool VarRadTyp, [In] int OverflowType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65541)]
+    void GridOptions([In] bool DispGrid, [In] double GridSpacing, [In] bool Snap, [In] bool DotStyle, [In] short NMajor, [In] short NMinor, [In] bool Align2edge, [In] bool AngleSnap, [In] double AngleUnit, [In] bool MinorAuto);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65542)]
+    void SetUnits([In] short UType, [In] short FractBase, [In] short FractDenom, [In] short SigDigits, [In] bool RoundToFraction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65543)]
+    void LBDownAt([In] int Flags, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65544)]
+    void LBUpAt([In] int Flags, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65545)]
+    void DragTo([In] int Flags, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65546)]
+    void SelectAt([In] int Flags, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65547)]
+    void CreateLineVB([In] double X1, [In] double Y1, [In] double Z1, [In] double X2, [In] double Y2, [In] double Z2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65548)]
+    bool CreateLine([In][MarshalAs(UnmanagedType.Struct)] object P1, [In][MarshalAs(UnmanagedType.Struct)] object P2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65549)]
+    void CreateCenterLineVB([In] double X1, [In] double Y1, [In] double Z1, [In] double X2, [In] double Y2, [In] double Z2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65550)]
+    bool CreateCenterLine([In][MarshalAs(UnmanagedType.Struct)] object P1, [In][MarshalAs(UnmanagedType.Struct)] object P2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65551)]
+    void CreateArcVB([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z, [In] double P3x, [In] double P3y, [In] double P3z, [In] short Dir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65552)]
+    bool CreateArc([In][MarshalAs(UnmanagedType.Struct)] object P1, [In][MarshalAs(UnmanagedType.Struct)] object P2, [In][MarshalAs(UnmanagedType.Struct)] object P3, [In] short Dir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65553)]
+    void CreateCircleVB([In] double P1x, [In] double P1y, [In] double P1z, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65554)]
+    bool CreateCircleByRadius([In][MarshalAs(UnmanagedType.Struct)] object P1, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65555)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetLines();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65556)]
+    void SketchTrim([In] int Op, [In] int SelEnd, [In] double X, [In] double Y);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65557)]
+    void SketchOffsetEdges([In] double Val);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65558)]
+    void SketchRectangle([In] double Val1, [In] double Val2, [In] double Z1, [In] double Val3, [In] double Val4, [In] double Z2, [In] bool Val5);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65559)]
+    void SketchPoint([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65560)]
+    void FeatureCut([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65561)]
+    void FeatureBoss([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65562)]
+    void SimpleHole([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65563)]
+    void FeatureLinearPattern([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65564)]
+    void NameView([In][MarshalAs(UnmanagedType.BStr)] string VName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65565)]
+    void ShowNamedView([In][MarshalAs(UnmanagedType.BStr)] string VName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65566)]
+    void CreatePlaneAtOffset([In] double Val, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65567)]
+    void Toolbars([In] bool M, [In] bool Vw, [In] bool SkMain, [In] bool Sk, [In] bool Feat, [In] bool Constr, [In] bool Macro);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65568)]
+    void CreatePlaneAtAngle([In] double Val, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65569)]
+    void SetParamValue([In] double Val);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65570)]
+    void AddRelation([In][MarshalAs(UnmanagedType.BStr)] string RelStr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65571)]
+    void DeleteAllRelations();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65572)]
+    void HoleWizard([In] double Depth, [In] short EndType, [In] bool Flip, [In] bool Dir, [In] int HType, [In] double D1, [In] double D2, [In] double D3, [In] double D4, [In] double D5, [In] double D6, [In] double D7, [In] double D8, [In] double D9, [In] double D10, [In] double D11, [In] double D12);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65573)]
+    bool SaveAs([In][MarshalAs(UnmanagedType.BStr)] string NewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65574)]
+    void ActivateSelectedFeature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65575)]
+    void SelectByName([In] int Flags, [In][MarshalAs(UnmanagedType.BStr)] string IdStr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65576)]
+    void SketchAddConstraints([In][MarshalAs(UnmanagedType.BStr)] string IdStr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65577)]
+    void SketchConstraintsDel([In] int ConstrInd, [In][MarshalAs(UnmanagedType.BStr)] string IdStr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65578)]
+    void SketchConstraintsDelAll();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65579)]
+    void Lock();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65580)]
+    void UnLock();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65581)]
+    void InsertFeatureShell([In] double Thickness, [In] bool Outward);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65582)]
+    void SketchFillet([In] double Rad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65583)]
+    void FeatureChamfer([In] double Width, [In] double Angle, [In] bool Flip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65584)]
+    void InsertMfDraft([In] double Angle, [In] bool FlipDir, [In] bool IsEdgeDraft, [In] int PropType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65585)]
+    void ParentChildRelationship();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65586)]
+    void SketchSpline([In] int MorePts, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65587)]
+    void SelectSketchPoint([In] double X, [In] double Y, [In] int Incidence);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65588)]
+    void SelectSketchLine([In] double X0, [In] double Y0, [In] int Inc0, [In] double X1, [In] double Y1, [In] int Inc1);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65589)]
+    void SelectSketchArc([In] double X0, [In] double Y0, [In] int Inc0, [In] double X1, [In] double Y1, [In] int Inc1, [In] double XC, [In] double YC, [In] int IncC, [In] int RotDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65590)]
+    void SelectSketchSpline([In] int Size, [In] double X0, [In] double Y0, [In] int Inc0, [In] double X1, [In] double Y1, [In] int Inc1, [In] double XC, [In] double YC, [In] int IncC);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65591)]
+    bool CreateTangentArc([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65592)]
+    bool Create3PointArc([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z, [In] double P3x, [In] double P3y, [In] double P3z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65593)]
+    bool CreateArcByCenter([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z, [In] double P3x, [In] double P3y, [In] double P3z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65594)]
+    bool CreateCircle([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65595)]
+    bool AddDimension([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65596)]
+    bool AddHorizontalDimension([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65597)]
+    bool AddVerticalDimension([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65598)]
+    bool SelectSketchItem([In] int SelOpt, [In][MarshalAs(UnmanagedType.BStr)] string Name, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65599)]
+    void ClearSelection();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65600)]
+    void Select([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65601)]
+    void AndSelect([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65602)]
+    bool CreatePoint([In] double PointX, [In] double PointY, [In] double PointZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65603)]
+    bool CreateLineDB([In] double Sx, [In] double Sy, [In] double Sz, [In] double Ex, [In] double Ey, [In] double Ez);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65604)]
+    bool CreateArcDB([In] double X1, [In] double Y1, [In] double Z1, [In] double X2, [In] double Y2, [In] double Z2, [In] double X3, [In] double Y3, [In] double Z3, [In] short Dir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65605)]
+    bool CreateCircleDB([In] double Cx, [In] double Cy, [In] double Cz, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65606)]
+    bool CreatePointDB([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65607)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetTitle();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65608)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetPathName();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65609)]
+    new int GetType();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65610)]
+    void InsertObject();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65611)]
+    void EditClearAll();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65612)]
+    void EditCopy();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65613)]
+    void EditCut();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65614)]
+    void ObjectDisplayContent();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65615)]
+    void ObjectDisplayAsIcon();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65616)]
+    void ObjectResetsize();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65617)]
+    void WindowRedraw();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    [DispId(65618)]
+    void Dummy3();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65619)]
+    void SetPickMode();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65620)]
+    void ViewRotateminusx();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65621)]
+    void ViewRotateminusy();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65622)]
+    void ViewRotateminusz();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65623)]
+    void ViewRotateplusx();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65624)]
+    void ViewRotateplusy();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65625)]
+    void ViewRotateplusz();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65626)]
+    void ViewTranslateminusx();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65627)]
+    void ViewTranslateminusy();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65628)]
+    void ViewTranslateplusx();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65629)]
+    void ViewTranslateplusy();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65630)]
+    void ViewRotXMinusNinety();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65631)]
+    void ViewRotYMinusNinety();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65632)]
+    void ViewRotYPlusNinety();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65633)]
+    void ViewZoomin();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65634)]
+    void ViewZoomout();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65635)]
+    void ViewDisplayHiddenremoved();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65636)]
+    void ViewDisplayWireframe();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65637)]
+    void ViewDisplayShaded();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65638)]
+    void ViewRwShading();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65639)]
+    void ViewOglShading();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65640)]
+    void ViewZoomtofit();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65641)]
+    void ViewRotate();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65642)]
+    void ViewTranslate();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65643)]
+    void ViewZoomto();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65644)]
+    void ViewDisplayHiddengreyed();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65645)]
+    void ViewDisplayFaceted();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65646)]
+    void ViewConstraint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65647)]
+    void UserFavors();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65648)]
+    void FeatureCirPattern([In] int Num, [In] double Spacing, [In] bool FlipDir, [In][MarshalAs(UnmanagedType.BStr)] string DName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65649)]
+    void EditSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65650)]
+    void FeatEdit();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65651)]
+    void FeatEditDef();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65652)]
+    void InsertPoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65653)]
+    void InsertFamilyTableNew();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65654)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    void Dummy1();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65655)]
+    void InsertFamilyTableEdit();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    [DispId(65656)]
+    void Dummy2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65657)]
+    void ToolsMacro();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65658)]
+    void ToolsGrid();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65659)]
+    void SketchCenterline();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65660)]
+    void SketchAlign();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65661)]
+    void SketchArc();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65662)]
+    void SketchTangentArc();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65663)]
+    void SketchCircle();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65664)]
+    void SketchUndo();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65665)]
+    void UserPreferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65666)]
+    void Lights();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65667)]
+    void SketchConstrainCoincident();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65668)]
+    void SketchConstrainConcentric();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65669)]
+    void SketchConstrainPerp();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65670)]
+    void SketchConstrainTangent();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65671)]
+    void SketchConstrainParallel();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65672)]
+    void SketchUseEdge();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65673)]
+    void SketchUseEdgeCtrline();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65674)]
+    void SketchMirror();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65675)]
+    void Save();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65676)]
+    void Close();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65677)]
+    void ViewDispRefaxes();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65678)]
+    void ViewDispRefplanes();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65679)]
+    void InsertSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65680)]
+    void InsertProtrusionSwept([In] bool Propagate, [In] bool Alignment, [In] bool KeepNormalConstant);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65681)]
+    void InsertProtrusionBlend([In] bool Closed);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65682)]
+    void ToolsMassProps();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65683)]
+    void PropertySheet();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65684)]
+    void BlankRefGeom();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65685)]
+    void UnBlankRefGeom();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65686)]
+    void EditDelete();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65687)]
+    void InsertProjectedSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65688)]
+    bool CreatePlaneFixed([In][MarshalAs(UnmanagedType.Struct)] object P1, [In][MarshalAs(UnmanagedType.Struct)] object P2, [In][MarshalAs(UnmanagedType.Struct)] object P3, [In] bool UseGlobal);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    [DispId(65689)]
+    void Dummy5();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65690)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    void Dummy6();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65691)]
+    void DebugCheckBody();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    [DispId(65692)]
+    void Dummy8();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65693)]
+    void DimPreferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65694)]
+    void UnblankSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65695)]
+    void EditSketchOrSingleSketchFeature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65696)]
+    void DebugCheckIgesGeom();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65697)]
+    void BlankSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65698)]
+    double GetDefaultTextHeight();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65699)]
+    bool IsActive([In][MarshalAs(UnmanagedType.BStr)] string CompStr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65700)]
+    bool CreateEllipse([In][MarshalAs(UnmanagedType.Struct)] object Center, [In][MarshalAs(UnmanagedType.Struct)] object Major, [In][MarshalAs(UnmanagedType.Struct)] object Minor);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65701)]
+    bool CreateEllipseVB([In] double CenterX, [In] double CenterY, [In] double CenterZ, [In] double MajorX, [In] double MajorY, [In] double MajorZ, [In] double MinorX, [In] double MinorY, [In] double MinorZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65702)]
+    bool CreateEllipticalArcByCenter([In][MarshalAs(UnmanagedType.Struct)] object Center, [In][MarshalAs(UnmanagedType.Struct)] object Major, [In][MarshalAs(UnmanagedType.Struct)] object Minor, [In][MarshalAs(UnmanagedType.Struct)] object Start, [In][MarshalAs(UnmanagedType.Struct)] object End);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65703)]
+    bool CreateEllipticalArcByCenterVB([In] double CenterX, [In] double CenterY, [In] double CenterZ, [In] double MajorX, [In] double MajorY, [In] double MajorZ, [In] double MinorX, [In] double MinorY, [In] double MinorZ, [In] double StartX, [In] double StartY, [In] double StartZ, [In] double EndX, [In] double EndY, [In] double EndZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65704)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetActiveSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65713)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Sketch IGetActiveSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65705)]
+    int GetTessellationQuality();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65706)]
+    void SetTessellationQuality([In] int QualityNum);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65707)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object Parameter([In][MarshalAs(UnmanagedType.BStr)] string StringIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65714)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Dimension IParameter([In][MarshalAs(UnmanagedType.BStr)] string StringIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65708)]
+    bool SelectByID([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65709)]
+    bool AndSelectByID([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65710)]
+    void Insert3DSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65715)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetLightSourceName([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65720)]
+    bool AddLightSource([In][MarshalAs(UnmanagedType.BStr)] string IdName, [In] int LTyp, [In][MarshalAs(UnmanagedType.BStr)] string UserName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65721)]
+    int AddLightSourceExtProperty([In] int ID, [In][MarshalAs(UnmanagedType.Struct)] object PropertyExtension);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65722)]
+    void ResetLightSourceExtProperty([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65723)]
+    void DeleteLightSource([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65724)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetLightSourceExtProperty([In] int ID, [In] int PropertyId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65725)]
+    int AddLightToScene([In][MarshalAs(UnmanagedType.BStr)] string LpszNewValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65726)]
+    int AddSceneExtProperty([In][MarshalAs(UnmanagedType.Struct)] object PropertyExtension);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65727)]
+    void ResetSceneExtProperty();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65728)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetSceneExtProperty([In] int PropertyId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65729)]
+    void FileSummaryInfo();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65730)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetGridSettings();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65731)]
+    void ToolsSketchTranslate();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65732)]
+    void ToolsDistance();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65733)]
+    void SkToolsAutoConstr();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65734)]
+    void ToolsSketchScale();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65735)]
+    void Paste();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65736)]
+    void ToolsConfiguration();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65737)]
+    void EntityProperties();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65738)]
+    bool GetArcCentersDisplayed();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65739)]
+    void SetArcCentersDisplayed([In] bool Setting);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65740)]
+    void AutoSolveToggle();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65741)]
+    [TypeLibFunc(TypeLibFuncFlags.FHidden)]
+    void Dummy7();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65742)]
+    double IGetLines();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65743)]
+    int GetLineCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65744)]
+    void ICreateEllipse([In] ref double Center, [In] ref double Major, [In] ref double Minor);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65745)]
+    void ICreateEllipticalArcByCenter([In] ref double Center, [In] ref double Major, [In] ref double Minor, [In] ref double Start, [In] ref double End);
+
+    [DispId(65746)]
+    double ILightSourcePropertyValues
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65746)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65746)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65747)]
+    void InsertCutSwept([In] bool Propagate, [In] bool Alignment, [In] bool KeepNormalConstant);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65748)]
+    void InsertCutBlend([In] bool Closed);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65749)]
+    void InsertHelix([In] bool Reversed, [In] bool Clockwised, [In] bool Tapered, [In] bool Outward, [In] int Helixdef, [In] double Height, [In] double Pitch, [In] double Revolution, [In] double TaperAngle, [In] double Startangle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65750)]
+    void ICreateLine([In] ref double P1, [In] ref double P2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65751)]
+    void ICreateCenterLine([In] ref double P1, [In] ref double P2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65752)]
+    void ICreateArc([In] ref double P1, [In] ref double P2, [In] ref double P3, [In] short Dir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65753)]
+    void ICreateCircleByRadius([In] ref double P1, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65754)]
+    void GraphicsRedraw();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65755)]
+    bool GetVisibilityOfConstructPlanes();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65756)]
+    bool GetDisplayWhenAdded();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65757)]
+    void SetDisplayWhenAdded([In] bool Setting);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65758)]
+    bool GetAddToDB();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65759)]
+    void SetAddToDB([In] bool Setting);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65760)]
+    bool DeSelectByID([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z);
+
+    [DispId(65761)]
+    bool Visible
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65761)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65761)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65762)]
+    void PrintDirect();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65763)]
+    void PrintPreview();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65764)]
+    void Quit();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65765)]
+    void CreatePlaneThru3Points();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65766)]
+    void ViewRotXPlusNinety();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65767)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetUnits();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65768)]
+    void SetAngularUnits([In] short UType, [In] short FractBase, [In] short FractDenom, [In] short SigDigits);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65769)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetAngularUnits();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65770)]
+    short IGetUnits();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65771)]
+    void ISetAngularUnits([In] short UType, [In] short FractBase, [In] short FractDenom, [In] short SigDigits);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65772)]
+    short IGetAngularUnits();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65773)]
+    void ShowConfiguration([In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65774)]
+    void ResetConfiguration();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65775)]
+    void AddConfiguration([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] bool SuppressByDefault, [In] bool HideByDefault, [In] bool MinFeatureManager, [In] bool InheritProperties, [In] uint Flags);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65776)]
+    void DeleteConfiguration([In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65777)]
+    void EditConfiguration([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string NewName, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] bool SuppressByDefault, [In] bool HideByDefault, [In] bool MinFeatureManager, [In] bool InheritProperties, [In] uint Flags);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65778)]
+    void CreatePlanePerCurveAndPassPoint([In] bool OrigAtCurve);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65779)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateFeatureMgrView([In] ref int Bitmap);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65780)]
+    bool AddFeatureMgrView([In] ref int Bitmap, [In] ref int AppView);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65781)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetStandardViewRotation([In] int ViewId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65782)]
+    double IGetStandardViewRotation([In] int ViewId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65783)]
+    void FeatureExtruRefSurface([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65784)]
+    [return: MarshalAs(UnmanagedType.IUnknown)]
+    object IGet3rdPartyStorage([In][MarshalAs(UnmanagedType.BStr)] string StringIn, [In] bool IsStoring);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65785)]
+    void DeleteFeatureMgrView([In] ref int AppView);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65786)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetMassProperties();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65787)]
+    bool IGetMassProperties([In] ref double MPropsData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65788)]
+    int GetLightSourceCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65789)]
+    int GetLightSourceIdFromName([In][MarshalAs(UnmanagedType.BStr)] string LightName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65790)]
+    void SetNextSelectionGroupId([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65791)]
+    void ISetNextSelectionGroupId([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65792)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertMidSurfaceExt([In] double Placement, [In] bool KnitFlag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65793)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    MidSurface2 IInsertMidSurfaceExt([In] double Placement, [In] bool KnitFlag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65794)]
+    void ICreatePlaneFixed([In] ref double P1, [In] ref double P2, [In] ref double P3, [In] bool UseGlobal);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65795)]
+    bool SelectByMark([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z, [In] int Mark);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65796)]
+    bool AndSelectByMark([In][MarshalAs(UnmanagedType.BStr)] string SelID, [In][MarshalAs(UnmanagedType.BStr)] string SelParams, [In] double X, [In] double Y, [In] double Z, [In] int Mark);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65797)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetDependencies([In] int Traverseflag, [In] int Searchflag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65798)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetDependencies([In] int Traverseflag, [In] int Searchflag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65799)]
+    int GetNumDependencies([In] int Traverseflag, [In] int Searchflag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65800)]
+    int IGetNumDependencies([In] int Traverseflag, [In] int Searchflag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65801)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FirstFeature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65802)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IFirstFeature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65803)]
+    void UnderiveSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65804)]
+    void DeriveSketch();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65805)]
+    bool IsExploded();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65806)]
+    bool DeleteSelection([In] bool ConfirmFlag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65807)]
+    bool DeleteNamedView([In][MarshalAs(UnmanagedType.BStr)] string ViewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65808)]
+    bool SetLightSourceName([In] int ID, [In][MarshalAs(UnmanagedType.BStr)] string NewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65809)]
+    void Insert3DSplineCurve([In] bool CurveClosed);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65810)]
+    bool SetLightSourcePropertyValuesVB([In][MarshalAs(UnmanagedType.BStr)] string IdName, [In] int LType, [In] double Diff, [In] int RgbColor, [In] double Dist, [In] double DirX, [In] double DirY, [In] double DirZ, [In] double SpotDirX, [In] double SpotDirY, [In] double SpotDirZ, [In] double SpotAngle, [In] double FallOff0, [In] double FallOff1, [In] double FallOff2, [In] double Ambient, [In] double Specular, [In] double SpotExponent, [In] bool BDisable);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65811)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    FeatMgrView ICreateFeatureMgrView([In] ref int Bitmap);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65812)]
+    bool SelectedEdgeProperties([In][MarshalAs(UnmanagedType.BStr)] string EdgeName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65813)]
+    bool SelectedFaceProperties([In] int RgbColor, [In] double Ambient, [In] double Diffuse, [In] double Specular, [In] double Shininess, [In] double Transparency, [In] double Emission, [In] bool UsePartProps, [In][MarshalAs(UnmanagedType.BStr)] string FaceName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65814)]
+    bool SelectedFeatureProperties([In] int RgbColor, [In] double Ambient, [In] double Diffuse, [In] double Specular, [In] double Shininess, [In] double Transparency, [In] double Emission, [In] bool UsePartProps, [In] bool Suppressed, [In][MarshalAs(UnmanagedType.BStr)] string FeatureName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65815)]
+    void InsertSplitLineSil();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65816)]
+    void InsertSplitLineProject([In] bool IsDirectional, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65817)]
+    void InsertRib([In] bool Is2Sided, [In] bool ReverseThicknessDir, [In] double Thickness, [In] int ReferenceEdgeIndex, [In] bool ReverseMaterialDir, [In] bool IsDrafted, [In] bool DraftOutward, [In] double DraftAngle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65818)]
+    bool AddRadialDimension([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65819)]
+    bool AddDiameterDimension([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65820)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetModelViewNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65821)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetModelViewNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65822)]
+    int GetModelViewCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65823)]
+    double GetUserPreferenceDoubleValue([In] int UserPreferenceValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65824)]
+    bool SetUserPreferenceDoubleValue([In] int UserPreferenceValue, [In] double Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65825)]
+    void ViewDisplayCurvature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65826)]
+    void Scale();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65827)]
+    void AddIns();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65828)]
+    bool InsertCurveFile([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65829)]
+    void InsertCurveFileBegin();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65830)]
+    bool InsertCurveFilePoint([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65831)]
+    bool InsertCurveFileEnd();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65832)]
+    bool ChangeSketchPlane();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65833)]
+    void ViewOrientationUndo();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65834)]
+    void PrintOut([In] int FromPage, [In] int ToPage, [In] int NumCopies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In] double Scale, [In] bool PrintToFile);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65835)]
+    void SketchOffsetEntities([In] double Offset, [In] bool Flip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65836)]
+    void InsertLibraryFeature([In][MarshalAs(UnmanagedType.BStr)] string LibFeatPartNameIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65837)]
+    void SketchModifyTranslate([In] double StartX, [In] double StartY, [In] double EndX, [In] double EndY);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65838)]
+    void SketchModifyRotate([In] double CenterX, [In] double CenterY, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65839)]
+    void SketchModifyFlip([In] int AxisFlag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65840)]
+    bool SketchModifyScale([In] double ScaleFactor);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65841)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetActiveConfiguration();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65842)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Configuration IGetActiveConfiguration();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65843)]
+    bool GetUserPreferenceToggle([In] int UserPreferenceToggle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65844)]
+    bool SetUserPreferenceToggle([In] int UserPreferenceValue, [In] bool OnFlag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65845)]
+    void InsertSweepRefSurface([In] bool Propagate, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65846)]
+    void InsertLoftRefSurface([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65847)]
+    void InsertProtrusionSwept2([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65848)]
+    void InsertProtrusionBlend2([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65849)]
+    void InsertCutSwept2([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65850)]
+    void InsertCutBlend2([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65851)]
+    bool IsEditingSelf();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65852)]
+    void ShowNamedView2([In][MarshalAs(UnmanagedType.BStr)] string VName, [In] int ViewId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65853)]
+    void InsertDome([In] double Height, [In] bool ReverseDir, [In] bool DoEllipticSurface);
+
+    [DispId(65854)]
+    string MaterialUserName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65854)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65854)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(65855)]
+    string MaterialIdName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65855)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65855)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(65856)]
+    object MaterialPropertyValues
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65856)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65856)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.Struct)]
+        set;
+    }
+
+    [DispId(65857)]
+    double IMaterialPropertyValues
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65857)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65857)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65858)]
+    int AddPropertyExtension([In][MarshalAs(UnmanagedType.Struct)] object PropertyExtension);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65859)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetPropertyExtension([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65860)]
+    void ResetPropertyExtension();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65861)]
+    int GetUpdateStamp();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65862)]
+    void ViewZoomTo2([In] double X1, [In] double Y1, [In] double Z1, [In] double X2, [In] double Y2, [In] double Z2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65863)]
+    void ScreenRotate();
+
+    [DispId(65864)]
+    short PrintSetup
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65864)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65864)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65865)]
+    void GraphicsRedraw2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65866)]
+    void InsertCosmeticThread([In] short Type, [In] double Depth, [In] double Length, [In][MarshalAs(UnmanagedType.BStr)] string Note);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65867)]
+    void HideCosmeticThread();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65868)]
+    void ShowCosmeticThread();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65869)]
+    void SimpleHole2([In] double Dia, [In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65870)]
+    void IRelease3rdPartyStorage([In][MarshalAs(UnmanagedType.BStr)] string StringIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65871)]
+    int FeatureRevolve2([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65872)]
+    int FeatureRevolveCut2([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65873)]
+    void SetSaveFlag();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65874)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetExternalReferenceName();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65875)]
+    bool SelectByRay([In][MarshalAs(UnmanagedType.Struct)] object DoubleInfoIn, [In] int TypeWanted);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65876)]
+    bool ISelectByRay([In] ref double PointIn, [In] ref double VectorIn, [In] double RadiusIn, [In] int TypeWanted);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65877)]
+    void SetSceneBkgDIB([In] int L_dib);
+
+    [DispId(65878)]
+    string SceneBkgImageFileName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65878)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65878)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65879)]
+    void InsertBkgImage([In][MarshalAs(UnmanagedType.BStr)] string NewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65880)]
+    void DeleteBkgImage();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65881)]
+    void InsertSplinePoint([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65882)]
+    void InsertLoftRefSurface2([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65883)]
+    void InsertProtrusionBlend3([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65884)]
+    void InsertCutBlend3([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65885)]
+    void AlignDimensions();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65886)]
+    void BreakDimensionAlignment();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65887)]
+    void SketchFillet1([In] double Rad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65888)]
+    void FeatureChamferType([In] short ChamferType, [In] double Width, [In] double Angle, [In] bool Flip, [In] double OtherDist, [In] double VertexChamDist1, [In] double VertexChamDist2, [In] double VertexChamDist3);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65889)]
+    void FeatureCutThin([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65890)]
+    void FeatureBossThin([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65891)]
+    bool InsertDatumTargetSymbol([In][MarshalAs(UnmanagedType.BStr)] string Datum1, [In][MarshalAs(UnmanagedType.BStr)] string Datum2, [In][MarshalAs(UnmanagedType.BStr)] string Datum3, [In] short AreaStyle, [In] bool AreaOutside, [In] double Value1, [In] double Value2, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr1, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr2, [In] bool ArrowsSmart, [In] short ArrowStyle, [In] short LeaderLineStyle, [In] bool LeaderBent, [In] bool ShowArea, [In] bool ShowSymbol);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65892)]
+    bool EditDatumTargetSymbol([In][MarshalAs(UnmanagedType.BStr)] string Datum1, [In][MarshalAs(UnmanagedType.BStr)] string Datum2, [In][MarshalAs(UnmanagedType.BStr)] string Datum3, [In] short AreaStyle, [In] bool AreaOutside, [In] double Value1, [In] double Value2, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr1, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr2, [In] bool ArrowsSmart, [In] short ArrowStyle, [In] short LeaderLineStyle, [In] bool LeaderBent, [In] bool ShowArea, [In] bool ShowSymbol);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65893)]
+    void InsertBOMBalloon();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65894)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FeatureReferenceCurve([In] int NumOfCurves, [In][MarshalAs(UnmanagedType.Struct)] object BaseCurves, [In] bool Merge, [In][MarshalAs(UnmanagedType.BStr)] string FromFileName, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65895)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    ReferenceCurve IFeatureReferenceCurve([In] int NumOfCurves, [In][MarshalAs(UnmanagedType.Interface)] ref Curve BaseCurves, [In] bool Merge, [In][MarshalAs(UnmanagedType.BStr)] string FromFileName, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65896)]
+    void FontBold([In] bool Bold);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65897)]
+    void FontItalic([In] bool Italic);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65898)]
+    void FontUnderline([In] bool Underline);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65899)]
+    void FontFace([In][MarshalAs(UnmanagedType.BStr)] string Face);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65900)]
+    void FontPoints([In] short Points);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65901)]
+    void FontUnits([In] double Units);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65902)]
+    bool SketchSplineByEqnParams([In][MarshalAs(UnmanagedType.Struct)] object ParamsIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65903)]
+    void AlignParallelDimensions();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65904)]
+    void SetBlockingState([In] int StateIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65905)]
+    void ResetBlockingState();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65906)]
+    int GetSceneBkgDIB();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65907)]
+    void InsertHatchedFace();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65908)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetColorTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65909)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    ColorTable IGetColorTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65910)]
+    void InsertSweepRefSurface2([In] bool Propagate, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65911)]
+    void InsertProtrusionSwept3([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65912)]
+    void InsertCutSwept3([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65913)]
+    bool IsOpenedViewOnly();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65914)]
+    bool IsOpenedReadOnly();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65915)]
+    void ViewZoomToSelection();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65916)]
+    void FeatureBossThicken([In] double Thickness, [In] int Direction, [In] int FaceIndex);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65917)]
+    void FeatureCutThicken([In] double Thickness, [In] int Direction, [In] int FaceIndex);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65918)]
+    bool InsertAxis();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65919)]
+    void EditUndo([In] uint NSteps);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65920)]
+    void SelectMidpoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65921)]
+    int ISketchSplineByEqnParams([In] ref int PropArray, [In] ref double KnotsArray, [In] ref double CntrlPntCoordArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65922)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object VersionHistory();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65923)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IVersionHistory();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65924)]
+    int IGetVersionHistoryCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65925)]
+    void Rebuild([In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65926)]
+    void InsertFeatureShellAddThickness([In] double Thickness);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65927)]
+    void InsertOffsetSurface([In] double Thickness, [In] bool Reverse);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65928)]
+    void SimplifySpline([In] double ToleranceIn);
+
+    [DispId(65929)]
+    string SummaryInfo
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65929)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65929)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(65930)]
+    string CustomInfo
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65930)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65930)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65931)]
+    int GetCustomInfoCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65932)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetCustomInfoType([In][MarshalAs(UnmanagedType.BStr)] string FieldName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65933)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetCustomInfoNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65934)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetCustomInfoNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65935)]
+    bool AddCustomInfo([In][MarshalAs(UnmanagedType.BStr)] string FieldName, [In][MarshalAs(UnmanagedType.BStr)] string FieldType, [In][MarshalAs(UnmanagedType.BStr)] string FieldValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65936)]
+    bool DeleteCustomInfo([In][MarshalAs(UnmanagedType.BStr)] string FieldName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65937)]
+    void PrintOut2([In] int FromPage, [In] int ToPage, [In] int NumCopies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In] double Scale, [In] bool PrintToFile, [In][MarshalAs(UnmanagedType.BStr)] string PtfName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65938)]
+    bool SetReadOnlyState([In] bool SetReadOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65939)]
+    bool InsertFamilyTableOpen([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65940)]
+    bool MultiSelectByRay([In][MarshalAs(UnmanagedType.Struct)] object DoubleInfoIn, [In] int TypeWanted, [In] bool Append);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65941)]
+    bool IMultiSelectByRay([In] ref double PointIn, [In] ref double VectorIn, [In] double RadiusIn, [In] int TypeWanted, [In] bool Append);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65942)]
+    void InsertNewNote3([In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] bool NoLeader, [In] bool BentLeader, [In] short ArrowStyle, [In] short LeaderSide, [In] double Angle, [In] short BalloonStyle, [In] short BalloonFit, [In] bool SmartArrow);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65943)]
+    void InsertWeldSymbol2([In][MarshalAs(UnmanagedType.BStr)] string Dim1, [In][MarshalAs(UnmanagedType.BStr)] string Symbol, [In][MarshalAs(UnmanagedType.BStr)] string Dim2, [In] bool Symmetric, [In] bool FieldWeld, [In] bool ShowOtherSide, [In] bool DashOnTop, [In] bool Peripheral, [In] bool HasProcess, [In][MarshalAs(UnmanagedType.BStr)] string ProcessValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65944)]
+    bool InsertSurfaceFinishSymbol2([In] int SymType, [In] int LeaderType, [In] double LocX, [In] double LocY, [In] double LocZ, [In] int LaySymbol, [In] int ArrowType, [In][MarshalAs(UnmanagedType.BStr)] string MachAllowance, [In][MarshalAs(UnmanagedType.BStr)] string OtherVals, [In][MarshalAs(UnmanagedType.BStr)] string ProdMethod, [In][MarshalAs(UnmanagedType.BStr)] string SampleLen, [In][MarshalAs(UnmanagedType.BStr)] string MaxRoughness, [In][MarshalAs(UnmanagedType.BStr)] string MinRoughness, [In][MarshalAs(UnmanagedType.BStr)] string RoughnessSpacing);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65945)]
+    int SaveSilent();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65946)]
+    int SaveAsSilent([In][MarshalAs(UnmanagedType.BStr)] string NewName, [In] bool SaveAsCopy);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65947)]
+    bool AddCustomInfo2([In][MarshalAs(UnmanagedType.BStr)] string FieldName, [In] int FieldType, [In][MarshalAs(UnmanagedType.BStr)] string FieldValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65948)]
+    int GetCustomInfoType2([In][MarshalAs(UnmanagedType.BStr)] string FieldName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65949)]
+    bool InsertRefPoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65950)]
+    int FeatureFillet2([In] double R1, [In] bool Propagate, [In] bool Ftyp, [In] bool VarRadTyp, [In] int OverflowType, [In] int NRadii, [In][MarshalAs(UnmanagedType.Struct)] object Radii);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65951)]
+    int IFeatureFillet2([In] double R1, [In] bool Propagate, [In] bool Ftyp, [In] bool VarRadTyp, [In] int OverflowType, [In] int NRadii, [In] ref double Radii);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65952)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetFirstAnnotation();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65953)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Annotation IGetFirstAnnotation();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65954)]
+    bool InsertCoordinateSystem([In] bool XFlippedIn, [In] bool YFlippedIn, [In] bool ZFlippedIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65955)]
+    bool GetToolbarVisibility([In] int Toolbar);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65956)]
+    void SetToolbarVisibility([In] int Toolbar, [In] bool Visibility);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65957)]
+    void ViewDispCoordinateSystems();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65958)]
+    void ViewDispTempRefaxes();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65959)]
+    void ViewDispRefPoints();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65960)]
+    void ViewDispOrigins();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65961)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetCoordinateSystemXformByName([In][MarshalAs(UnmanagedType.BStr)] string NameIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65962)]
+    double IGetCoordinateSystemXformByName([In][MarshalAs(UnmanagedType.BStr)] string NameIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65963)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetCurrentCoordinateSystemName();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65964)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    EnumModelViews EnumModelViews();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65965)]
+    bool InsertCompositeCurve();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65966)]
+    void SketchParabola([In] double Val1, [In] double Val2, [In] double Z1, [In] double Val3, [In] double Val4, [In] double Z2, [In] double Val5, [In] double Val6, [In] double Z3, [In] double Val7, [In] double Val8, [In] double Z4);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65967)]
+    void InsertRadiateSurface([In] double Distance, [In] bool FlipDir, [In] bool TangentPropagate);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65968)]
+    void InsertSewRefSurface();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65969)]
+    int InsertShape([In] int PressureOn, [In] int TangentsOn, [In] double PressureGain, [In] double TangentGain, [In] double CurveSpringGain, [In] double Alpha, [In] double Beta, [In] double Gamma, [In] double Delta, [In] int Degree, [In] int Split, [In] int Tuning);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65970)]
+    void InsertMfDraft2([In] double Angle, [In] bool FlipDir, [In] bool IsEdgeDraft, [In] int PropType, [In] bool StepDraft);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65971)]
+    int GetConfigurationCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65972)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetConfigurationNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65973)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetConfigurationNames([In][Out] ref int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65974)]
+    void FeatureCut2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] int KeepPieceIndex);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65975)]
+    void InsertCutSurface([In] bool Flip, [In] int KeepPieceIndex);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65976)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetDetailingDefaults();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65977)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DetailingDefaults IGetDetailingDefaults();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65978)]
+    int ListExternalFileReferencesCount([In] bool UseSearchRules);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65979)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object ListExternalFileReferences([In] bool UseSearchRules);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65980)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IListExternalFileReferences([In] bool UseSearchRules, [In] int NumRefs);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65981)]
+    bool SketchSplineByEqnParams2([In][MarshalAs(UnmanagedType.Struct)] object ParamsIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65982)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetFirstModelView();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65983)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    ModelView IGetFirstModelView();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65984)]
+    bool InsertPlanarRefSurface();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65985)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetNext();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65986)]
+    bool GetSaveFlag();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65987)]
+    bool AddCustomInfo3([In][MarshalAs(UnmanagedType.BStr)] string Configuration, [In][MarshalAs(UnmanagedType.BStr)] string FieldName, [In] int FieldType, [In][MarshalAs(UnmanagedType.BStr)] string FieldValue);
+
+    [DispId(65988)]
+    string CustomInfo2
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65988)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65988)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65989)]
+    bool DeleteCustomInfo2([In][MarshalAs(UnmanagedType.BStr)] string Configuration, [In][MarshalAs(UnmanagedType.BStr)] string FieldName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65990)]
+    int GetCustomInfoCount2([In][MarshalAs(UnmanagedType.BStr)] string Configuration);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65991)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetCustomInfoNames2([In][MarshalAs(UnmanagedType.BStr)] string Configuration);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65992)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetCustomInfoNames2([In][MarshalAs(UnmanagedType.BStr)] string Configuration);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65993)]
+    int GetCustomInfoType3([In][MarshalAs(UnmanagedType.BStr)] string Configuration, [In][MarshalAs(UnmanagedType.BStr)] string FieldName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65994)]
+    bool GetConsiderLeadersAsLines();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65995)]
+    bool SetConsiderLeadersAsLines([In] bool LeadersAsLines);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65996)]
+    void InsertRevolvedRefSurface([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65997)]
+    int GetBendState();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65998)]
+    int SetBendState([In] int BendState);
+
+    [DispId(65999)]
+    bool ShowFeatureErrorDialog
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65999)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(65999)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66000)]
+    void ClearUndoList();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66001)]
+    int GetFeatureManagerWidth();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66002)]
+    int SetFeatureManagerWidth([In] int Width);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66003)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertProjectedSketch2([In] int Reverse);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66004)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertProjectedSketch2([In] int Reverse);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66005)]
+    int GetFeatureCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66006)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FeatureByPositionReverse([In] int Num);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66007)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IFeatureByPositionReverse([In] int Num);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66008)]
+    int RayIntersections([In][MarshalAs(UnmanagedType.Struct)] object BodiesIn, [In][MarshalAs(UnmanagedType.Struct)] object BasePointsIn, [In][MarshalAs(UnmanagedType.Struct)] object VectorsIn, [In] int Options, [In] double HitRadius, [In] double Offset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66009)]
+    int IRayIntersections([In][MarshalAs(UnmanagedType.Interface)] ref Body2 BodiesIn, [In] int NumBodies, [In] ref double BasePointsIn, [In] ref double VectorsIn, [In] int NumRays, [In] int Options, [In] double HitRadius, [In] double Offset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66010)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetRayIntersectionsPoints();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66011)]
+    double IGetRayIntersectionsPoints();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66012)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetRayIntersectionsTopology();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66013)]
+    [return: MarshalAs(UnmanagedType.IUnknown)]
+    object IGetRayIntersectionsTopology();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66014)]
+    void EditSeedFeat();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66015)]
+    bool EditSuppress();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66016)]
+    bool EditUnsuppress();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66017)]
+    bool EditUnsuppressDependent();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66018)]
+    bool EditRollback();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66019)]
+    int Save2([In] bool Silent);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66020)]
+    int SaveAs2([In][MarshalAs(UnmanagedType.BStr)] string NewName, [In] int SaveAsVersion, [In] bool SaveAsCopy, [In] bool Silent);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66021)]
+    void SetPopupMenuMode([In] int ModeIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66022)]
+    int GetPopupMenuMode();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66023)]
+    void CloseFamilyTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66024)]
+    void CreatePlaneAtSurface([In] int InterIndex, [In] bool ProjOpt, [In] bool ReverseDir, [In] bool NormalPlane, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66025)]
+    void SketchOffset([In] double Offset, [In] bool ContourMode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66026)]
+    bool CreateLinearSketchStepAndRepeat([In] int NumX, [In] int NumY, [In] double SpacingX, [In] double SpacingY, [In] double AngleX, [In] double AngleY, [In][MarshalAs(UnmanagedType.BStr)] string DeleteInstances);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66027)]
+    bool SetAmbientLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] double Ambient, [In] double Diffuse, [In] double Specular, [In] int Colour, [In] bool Enabled, [In] bool Fixed);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66028)]
+    bool GetAmbientLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] ref double Ambient, [In] ref double Diffuse, [In] ref double Specular, [In] ref int Colour, [In] ref bool Enabled, [In] ref bool Fixed);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66029)]
+    bool SetPointLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] double Ambient, [In] double Diffuse, [In] double Specular, [In] int Colour, [In] bool Enabled, [In] bool Fixed, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66030)]
+    bool GetPointLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] ref double Ambient, [In] ref double Diffuse, [In] ref double Specular, [In] ref int Colour, [In] ref bool Enabled, [In] ref bool Fixed, [In] ref double X, [In] ref double Y, [In] ref double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66031)]
+    bool SetDirectionLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] double Ambient, [In] double Diffuse, [In] double Specular, [In] int Colour, [In] bool Enabled, [In] bool Fixed, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66032)]
+    bool GetDirectionLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] ref double Ambient, [In] ref double Diffuse, [In] ref double Specular, [In] ref int Colour, [In] ref bool Enabled, [In] ref bool Fixed, [In] ref double X, [In] ref double Y, [In] ref double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66033)]
+    bool SetSpotlightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] double Ambient, [In] double Diffuse, [In] double Specular, [In] int Colour, [In] bool Enabled, [In] bool Fixed, [In] double Posx, [In] double Posy, [In] double Posz, [In] double Targetx, [In] double Targety, [In] double Targetz, [In] double ConeAngle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66034)]
+    bool GetSpotlightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] ref double Ambient, [In] ref double Diffuse, [In] ref double Specular, [In] ref int Colour, [In] ref bool Enabled, [In] ref bool Fixed, [In] ref double X, [In] ref double Y, [In] ref double Z, [In] ref double Targetx, [In] ref double Targety, [In] ref double Targetz, [In] ref double ConeAngle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66035)]
+    void SplitOpenSegment([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66036)]
+    void AutoInferToggle();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66037)]
+    void SketchRectangleAtAnyAngle([In] double Val1, [In] double Val2, [In] double Z1, [In] double Val3, [In] double Val4, [In] double Z2, [In] double Val3x, [In] double Val3y, [In] double Z3, [In] bool Val5);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66038)]
+    bool CreateCircularSketchStepAndRepeat([In] double ArcRadius, [In] double ArcAngle, [In] int PatternNum, [In] double PatternSpacing, [In] bool PatternRotate, [In][MarshalAs(UnmanagedType.BStr)] string DeleteInstances);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66039)]
+    void SplitClosedSegment([In] double X0, [In] double Y0, [In] double Z0, [In] double X1, [In] double Y1, [In] double Z1);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66040)]
+    bool IsLightLockedToModel([In] int LightId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66041)]
+    bool LockLightToModel([In] int LightId, [In] bool Fix);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66042)]
+    int FeatureFillet3([In] double R1, [In] bool Propagate, [In] int Ftyp, [In] bool VarRadTyp, [In] int OverflowType, [In] int NRadii, [In][MarshalAs(UnmanagedType.Struct)] object Radii, [In] bool UseHelpPoint, [In] bool UseTangentHoldLine);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66043)]
+    int IFeatureFillet3([In] double R1, [In] bool Propagate, [In] int Ftyp, [In] bool VarRadTyp, [In] int OverflowType, [In] int NRadii, [In] ref double Radii, [In] bool UseHelpPoint, [In] bool UseTangentHoldLine);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66044)]
+    void InsertConnectionPoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66045)]
+    void InsertRoutePoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66046)]
+    void FeatureBossThicken2([In] double Thickness, [In] int Direction, [In] int FaceIndex, [In] bool FillVolume);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66047)]
+    void FeatureCutThicken2([In] double Thickness, [In] int Direction, [In] int FaceIndex, [In] bool FillVolume);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66048)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetConfigurationByName([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66049)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Configuration IGetConfigurationByName([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66050)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePoint2([In] double PointX, [In] double PointY, [In] double PointZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66051)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchPoint ICreatePoint2([In] double PointX, [In] double PointY, [In] double PointZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66052)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateLine2([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66053)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateLine2([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66054)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetActiveSketch2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66055)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Sketch IGetActiveSketch2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66056)]
+    void DrawLightIcons();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66057)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetLayerManager();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66058)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    LayerMgr IGetLayerManager();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66059)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateCircle2([In] double XC, [In] double YC, [In] double Zc, [In] double Xp, [In] double Yp, [In] double Zp);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66060)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateCircle2([In] double XC, [In] double YC, [In] double Zc, [In] double Xp, [In] double Yp, [In] double Zp);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66061)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateCircleByRadius2([In] double XC, [In] double YC, [In] double Zc, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66062)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateCircleByRadius2([In] double XC, [In] double YC, [In] double Zc, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66063)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateArc2([In] double XC, [In] double YC, [In] double Zc, [In] double Xp1, [In] double Yp1, [In] double Zp1, [In] double Xp2, [In] double Yp2, [In] double Zp2, [In] short Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66064)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateArc2([In] double XC, [In] double YC, [In] double Zc, [In] double Xp1, [In] double Yp1, [In] double Zp1, [In] double Xp2, [In] double Yp2, [In] double Zp2, [In] short Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66065)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateEllipse2([In] double CenterX, [In] double CenterY, [In] double CenterZ, [In] double MajorX, [In] double MajorY, [In] double MajorZ, [In] double MinorX, [In] double MinorY, [In] double MinorZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66066)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateEllipse2([In] double CenterX, [In] double CenterY, [In] double CenterZ, [In] double MajorX, [In] double MajorY, [In] double MajorZ, [In] double MinorX, [In] double MinorY, [In] double MinorZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66067)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateEllipticalArc2([In] double CenterX, [In] double CenterY, [In] double CenterZ, [In] double MajorX, [In] double MajorY, [In] double MajorZ, [In] double MinorX, [In] double MinorY, [In] double MinorZ, [In] double StartX, [In] double StartY, [In] double StartZ, [In] double EndX, [In] double EndY, [In] double EndZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66068)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateEllipticalArc2([In] double CenterX, [In] double CenterY, [In] double CenterZ, [In] double MajorX, [In] double MajorY, [In] double MajorZ, [In] double MinorX, [In] double MinorY, [In] double MinorZ, [In] double StartX, [In] double StartY, [In] double StartZ, [In] double EndX, [In] double EndY, [In] double EndZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66069)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateSpline([In][MarshalAs(UnmanagedType.Struct)] object PointData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66070)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateSpline([In] int PointCount, [In] ref double PointData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66071)]
+    void ViewZoomtofit2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66072)]
+    void SetInferenceMode([In] bool InferenceMode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66073)]
+    bool GetInferenceMode();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66074)]
+    bool SetTitle2([In][MarshalAs(UnmanagedType.BStr)] string NewTitle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66075)]
+    bool SketchFillet2([In] double Rad, [In] short ConstrainedCorners);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66076)]
+    bool IsTessellationValid();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66077)]
+    void EditRoute();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66078)]
+    void FileReload();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66079)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetDesignTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66080)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DesignTable IGetDesignTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66081)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetEntityName([In][MarshalAs(UnmanagedType.IDispatch)] object Entity);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66082)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetEntityName([In][MarshalAs(UnmanagedType.Interface)] Entity Entity);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66083)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    ModelDoc2 IGetNext();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66084)]
+    bool ShowConfiguration2([In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66085)]
+    bool AddConfiguration2([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] bool SuppressByDefault, [In] bool HideByDefault, [In] bool MinFeatureManager, [In] bool InheritProperties, [In] uint Flags);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66086)]
+    bool DeleteConfiguration2([In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66087)]
+    bool EditConfiguration2([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string NewName, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] bool SuppressByDefault, [In] bool HideByDefault, [In] bool MinFeatureManager, [In] bool InheritProperties, [In] uint Flags);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66088)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateSplineByEqnParams([In][MarshalAs(UnmanagedType.Struct)] object ParamsIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66089)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchSegment ICreateSplineByEqnParams([In] ref int PropArray, [In] ref double KnotsArray, [In] ref double CntrlPntCoordArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66090)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateFeatureMgrView2([In] ref int Bitmap, [In][MarshalAs(UnmanagedType.BStr)] string ToolTip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66091)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    FeatMgrView ICreateFeatureMgrView2([In] ref int Bitmap, [In][MarshalAs(UnmanagedType.BStr)] string ToolTip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66092)]
+    bool AddFeatureMgrView2([In] ref int Bitmap, [In] ref int AppView, [In][MarshalAs(UnmanagedType.BStr)] string ToolTip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66093)]
+    void FeatureCut3([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] int KeepPieceIndex);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66094)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetFirstAnnotation2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66095)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Annotation IGetFirstAnnotation2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66096)]
+    void InsertExtendSurface([In] bool ExtendLinear, [In] int EndCondition, [In] double Distance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66097)]
+    void InsertTangencySurface([In] bool OneSide, [In] bool IsFlip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66098)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object CreateSplinesByEqnParams([In][MarshalAs(UnmanagedType.Struct)] object ParamsIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66099)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    EnumSketchSegments ICreateSplinesByEqnParams([In] ref int PropArray, [In] ref double KnotsArray, [In] ref double CntrlPntCoordArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66100)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object CreateClippedSplines([In][MarshalAs(UnmanagedType.Struct)] object ParamsIn, [In] double X1, [In] double Y1, [In] double X2, [In] double Y2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66101)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    EnumSketchSegments ICreateClippedSplines([In] ref int PropArray, [In] ref double KnotsArray, [In] ref double CntrlPntCoordArray, [In] double X1, [In] double Y1, [In] double X2, [In] double Y2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66102)]
+    bool EditSuppress2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66103)]
+    bool EditUnsuppress2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66104)]
+    bool EditUnsuppressDependent2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66105)]
+    bool EditRollback2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66106)]
+    void HideDimension();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66107)]
+    void ShowFeatureDimensions();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66108)]
+    void HideFeatureDimensions();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66109)]
+    void Sketch3DIntersections();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66110)]
+    int FeatureFillet4([In] double R1, [In] bool Propagate, [In] bool UniformRadius, [In] int Ftyp, [In] bool VarRadTyp, [In] int OverflowType, [In] int NRadii, [In][MarshalAs(UnmanagedType.Struct)] object Radii, [In] bool UseHelpPoint, [In] bool UseTangentHoldLine, [In] bool CornerType, [In] int SetbackDistCount, [In][MarshalAs(UnmanagedType.Struct)] object SetBackDistances);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66111)]
+    int IFeatureFillet4([In] double R1, [In] bool Propagate, [In] bool UniformRadius, [In] int Ftyp, [In] bool VarRadTyp, [In] int OverflowType, [In] int NRadii, [In] ref double Radii, [In] bool UseHelpPoint, [In] bool UseTangentHoldLine, [In] bool CornerType, [In] int SetbackDistCount, [In] ref double SetBackDistances);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66112)]
+    void InsertDeleteFace();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66113)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetDependencies2([In] bool Traverseflag, [In] bool Searchflag, [In] bool AddReadOnlyInfo);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66114)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetDependencies2([In] bool Traverseflag, [In] bool Searchflag, [In] bool AddReadOnlyInfo);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66115)]
+    int IGetNumDependencies2([In] bool Traverseflag, [In] bool Searchflag, [In] bool AddReadOnlyInfo);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66116)]
+    void InsertScale([In] double ScaleFactor_x, [In] double ScaleFactor_y, [In] double ScaleFactor_z, [In] bool IsUniform, [In] int ScaleType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66117)]
+    void LockAllExternalReferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66118)]
+    void UnlockAllExternalReferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66119)]
+    void BreakAllExternalReferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66120)]
+    bool EditDimensionProperties([In] int TolType, [In] double TolMax, [In] double TolMin, [In][MarshalAs(UnmanagedType.BStr)] string TolMaxFit, [In][MarshalAs(UnmanagedType.BStr)] string TolMinFit, [In] bool UseDocPrec, [In] int Precision, [In] int ArrowsIn, [In] bool UseDocArrows, [In] int Arrow1, [In] int Arrow2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66121)]
+    bool SketchPolygon([In] double XCenter, [In] double YCenter, [In] double XEdge, [In] double YEdge, [In] int NSides, [In] bool BInscribed);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66122)]
+    int GetBlockingState();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66123)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateFeatureMgrView3([In] ref int Bitmap, [In][MarshalAs(UnmanagedType.BStr)] string ToolTip, [In] int WhichPane);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66124)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    FeatMgrView ICreateFeatureMgrView3([In] ref int Bitmap, [In][MarshalAs(UnmanagedType.BStr)] string ToolTip, [In] int WhichPane);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66125)]
+    bool AddFeatureMgrView3([In] ref int Bitmap, [In] ref int AppView, [In][MarshalAs(UnmanagedType.BStr)] string ToolTip, [In] int WhichPane);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66126)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneAtOffset2([In] double Val, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66127)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneAtOffset2([In] double Val, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66128)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneAtAngle2([In] double Val, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66129)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneAtAngle2([In] double Val, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66130)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneThru3Points2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66131)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneThru3Points2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66132)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlanePerCurveAndPassPoint2([In] bool OrigAtCurve);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66133)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlanePerCurveAndPassPoint2([In] bool OrigAtCurve);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66134)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneAtSurface2([In] int InterIndex, [In] bool ProjOpt, [In] bool ReverseDir, [In] bool NormalPlane, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66135)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneAtSurface2([In] int InterIndex, [In] bool ProjOpt, [In] bool ReverseDir, [In] bool NormalPlane, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66136)]
+    int GetUserPreferenceIntegerValue([In] int UserPreferenceValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66137)]
+    bool SetUserPreferenceIntegerValue([In] int UserPreferenceValue, [In] int Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66138)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetUserPreferenceTextFormat([In] int UserPreferenceValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66139)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TextFormat IGetUserPreferenceTextFormat([In] int UserPreferenceValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66140)]
+    bool SetUserPreferenceTextFormat([In] int UserPreferenceValue, [In][MarshalAs(UnmanagedType.IDispatch)] object Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66141)]
+    bool ISetUserPreferenceTextFormat([In] int UserPreferenceValue, [In][MarshalAs(UnmanagedType.Interface)] TextFormat Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66142)]
+    void InsertRib2([In] bool Is2Sided, [In] bool ReverseThicknessDir, [In] double Thickness, [In] int ReferenceEdgeIndex, [In] bool ReverseMaterialDir, [In] bool IsDrafted, [In] bool DraftOutward, [In] double DraftAngle, [In] bool IsNormToSketch);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66143)]
+    bool InsertObjectFromFile([In][MarshalAs(UnmanagedType.BStr)] string FilePath, [In] bool CreateLink, [In] double Xx, [In] double Yy, [In] double Zz);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66144)]
+    void InspectCurvature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66145)]
+    void RemoveInspectCurvature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66146)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertDatumTag2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66147)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DatumTag IInsertDatumTag2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66148)]
+    int ActivateFeatureMgrView([In] ref int AppView);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66149)]
+    void FeatureSketchDrivenPattern([In] bool UseCentroid);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66150)]
+    void HideShowBodies();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66151)]
+    void HideSolidBody();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66152)]
+    void ShowSolidBody();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66153)]
+    void InsertFramePoint([In] double Xx, [In] double Yy, [In] double Zz);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66154)]
+    void LockFramePoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66155)]
+    void UnlockFramePoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66156)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertGtol();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66157)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Gtol IInsertGtol();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66158)]
+    bool DeActivateFeatureMgrView([In] ref int AppView);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66159)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertNote([In][MarshalAs(UnmanagedType.BStr)] string Text);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66160)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note IInsertNote([In][MarshalAs(UnmanagedType.BStr)] string Text);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66161)]
+    void SetSaveAsFileName([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66162)]
+    void ClosePrintPreview();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66163)]
+    void HideComponent2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66164)]
+    void ShowComponent2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66165)]
+    bool SaveBMP([In][MarshalAs(UnmanagedType.BStr)] string FileNameIn, [In] int WidthIn, [In] int HeightIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66166)]
+    void InsertSketch2([In] bool UpdateEditRebuild);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66167)]
+    void Insert3DSketch2([In] bool UpdateEditRebuild);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66168)]
+    void InsertDeleteHole();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66169)]
+    void PreTrimSurface([In] bool BMutualTrimIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66170)]
+    void PostTrimSurface([In] bool BSewSurfaceIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66171)]
+    void SketchConvertIsoCurves([In] double PercentRatio, [In] bool VORuDir, [In] bool DoConstrain, [In] bool SkipHoles);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66172)]
+    void SelectLoop();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66173)]
+    void InsertSheetMetalBaseFlange([In] double Thickness, [In] bool ThickenDir, [In] double Radius, [In] double ExtrudeDist1, [In] double ExtrudeDist2, [In] bool FlipExtruDir, [In] int EndCondition1, [In] int EndCondition2, [In] int DirToUse);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66174)]
+    void InsertSheetMetalFold();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66175)]
+    void InsertSheetMetalUnfold();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66176)]
+    void InsertSheetMetalMiterFlange([In] bool UseReliefRatio, [In] bool UseDefaultGap, [In] bool UseAutoRelief, [In] double GlobalRadius, [In] double RipGap, [In] double AutoReliefRatio, [In] double AutoReliefWidth, [In] double AutoReliefDepth, [In] int ReliefType, [In] int RipLocation, [In] bool TrimSideBends);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66177)]
+    void CreateGroup();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66178)]
+    void RemoveItemsFromGroup();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66179)]
+    void RemoveGroups();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66180)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertBOMBalloon2([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66181)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note IInsertBOMBalloon2([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66182)]
+    void EditRedo([In] uint NSteps);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66183)]
+    void InsertProtrusionBlend4([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66184)]
+    void InsertCutBlend4([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66185)]
+    void InsertProtrusionSwept4([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66186)]
+    void InsertCutSwept4([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66187)]
+    void SelectTangency();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66188)]
+    bool InsertBendTableOpen([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66189)]
+    bool InsertBendTableNew([In][MarshalAs(UnmanagedType.BStr)] string FileName, [In][MarshalAs(UnmanagedType.BStr)] string Units, [In][MarshalAs(UnmanagedType.BStr)] string Type);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66190)]
+    void InsertBendTableEdit();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66191)]
+    void DeleteBendTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66192)]
+    void InsertSheetMetal3dBend([In] double Angle, [In] double Radius, [In] bool FlipDir, [In] short BendPos);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66193)]
+    bool CreateTangentArc2([In] double P1x, [In] double P1y, [In] double P1z, [In] double P2x, [In] double P2y, [In] double P2z, [In] int ArcTypeIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66194)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetMassProperties2([In][Out] ref int Status);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66195)]
+    double IGetMassProperties2([In][Out] ref int Status);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66196)]
+    void SketchChamfer([In] double AngleORdist, [In] double Dist1, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66197)]
+    void FeatureCut4([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] int KeepPieceIndex, [In] bool NormalCut);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66198)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    PropertyManagerPage GetPropertyManagerPage([In] int DialogId, [In][MarshalAs(UnmanagedType.BStr)] string Title, [In][MarshalAs(UnmanagedType.IUnknown)] object Handler);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66199)]
+    void AlignOrdinate();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66200)]
+    void EditOrdinate();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66201)]
+    bool ReattachOrdinate();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66202)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object EditBalloonProperties([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66203)]
+    bool EditDimensionProperties2([In] int TolType, [In] double TolMax, [In] double TolMin, [In][MarshalAs(UnmanagedType.BStr)] string TolMaxFit, [In][MarshalAs(UnmanagedType.BStr)] string TolMinFit, [In] bool UseDocPrec, [In] int Precision, [In] int ArrowsIn, [In] bool UseDocArrows, [In] int Arrow1, [In] int Arrow2, [In][MarshalAs(UnmanagedType.BStr)] string PrefixText, [In][MarshalAs(UnmanagedType.BStr)] string SuffixText, [In] bool ShowValue, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText1, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText2, [In] bool CenterText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66204)]
+    void InsertSheetMetalClosedCorner();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66205)]
+    bool SketchUseEdge2([In] bool Chain);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66206)]
+    bool SketchOffsetEntities2([In] double Offset, [In] bool BothDirections, [In] bool Chain);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66207)]
+    bool SketchOffset2([In] double Offset, [In] bool BothDirections, [In] bool Chain);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66208)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66209)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DisplayDimension IAddDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66210)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddHorizontalDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66211)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DisplayDimension IAddHorizontalDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66212)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddVerticalDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66213)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DisplayDimension IAddVerticalDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66214)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddRadialDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66215)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DisplayDimension IAddRadialDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66216)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddDiameterDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66217)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DisplayDimension IAddDiameterDimension2([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66218)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetUserUnit([In] int UnitType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66219)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    UserUnit IGetUserUnit([In] int UnitType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66220)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertWeldSymbol3();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66221)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    WeldSymbol IInsertWeldSymbol3();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66222)]
+    int SaveAs3([In][MarshalAs(UnmanagedType.BStr)] string NewName, [In] int SaveAsVersion, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66223)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetUserPreferenceStringValue([In] int UserPreference);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66224)]
+    bool SetUserPreferenceStringValue([In] int UserPreference, [In][MarshalAs(UnmanagedType.BStr)] string Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66225)]
+    void DeleteDesignTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66226)]
+    bool EditRebuild3();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66227)]
+    bool ForceRebuild3([In] bool TopOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66228)]
+    int FeatureFillet5([In] int Options, [In] double R1, [In] int Ftyp, [In] int OverflowType, [In][MarshalAs(UnmanagedType.Struct)] object Radii, [In][MarshalAs(UnmanagedType.Struct)] object SetBackDistances, [In][MarshalAs(UnmanagedType.Struct)] object PointRadiusArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66229)]
+    int IFeatureFillet5([In] int Options, [In] double R1, [In] int Ftyp, [In] int OverflowType, [In] int NRadii, [In] ref double Radii, [In] int SetbackDistCount, [In] ref double SetBackDistances, [In] int PointCount, [In] ref double PointRadiusArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66230)]
+    void InsertSheetMetalBreakCorner([In] int Type, [In] double Distance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66231)]
+    void InsertSheetMetalHem([In] int Type, [In] int Position, [In] bool Reverse, [In] double DLength, [In] double DGap, [In] double DAngle, [In] double DRad, [In] double DMiterGap);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66232)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneAtOffset3([In] double Val, [In] bool FlipDir, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66233)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneAtOffset3([In] double Val, [In] bool FlipDir, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66234)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneAtAngle3([In] double Val, [In] bool FlipDir, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66235)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneAtAngle3([In] double Val, [In] bool FlipDir, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66236)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneThru3Points3([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66237)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneThru3Points3([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66238)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneThruPtParallelToPlane([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66239)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneThruPtParallelToPlane([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66240)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneThruLineAndPt([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66241)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneThruLineAndPt([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66242)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlanePerCurveAndPassPoint3([In] bool OrigAtCurve, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66243)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlanePerCurveAndPassPoint3([In] bool OrigAtCurve, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66244)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneAtSurface3([In] short InterIndex, [In] bool ProjOpt, [In] bool ReverseDir, [In] bool NormalPlane, [In] double Angle, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66245)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneAtSurface3([In] short InterIndex, [In] bool ProjOpt, [In] bool ReverseDir, [In] bool NormalPlane, [In] double Angle, [In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66246)]
+    bool InsertAxis2([In] bool AutoSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66247)]
+    bool InsertSketchPicture([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66248)]
+    void GetZebraStripeData([In][Out] ref double Size, [In][Out] ref double Ratio, [In][Out] ref int Color1, [In][Out] ref int Color2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66249)]
+    void SetZebraStripeData([In] double Size, [In] double Ratio, [In] int Color1, [In] int Color2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66250)]
+    void InsertSketchPictureData([In] short Width, [In] short Height, [In] int PDataIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66251)]
+    void FeatureCurvePattern([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In] bool EqualSpacing1, [In] bool EqualSpacing2, [In] bool UseCentroid, [In] bool AlignToSeed, [In] bool OffsetCurve, [In] bool PatternSeedOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66252)]
+    void InsertFeatureReplaceFace();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66253)]
+    void InsertRip([In] double Gap);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66254)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertSheetMetalEdgeFlange([In][MarshalAs(UnmanagedType.IDispatch)] object FlangeEdge, [In][MarshalAs(UnmanagedType.IDispatch)] object SketchFeat, [In] int BooleanOptions, [In] double DAngle, [In] double DRadius, [In] int BendPosition, [In] double DOffsetDist, [In] int ReliefType, [In] double DReliefRatio, [In] double DReliefWidth, [In] double DReliefDepth);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66255)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertSheetMetalEdgeFlange([In][MarshalAs(UnmanagedType.Interface)] Edge FlangeEdge, [In][MarshalAs(UnmanagedType.Interface)] Feature SketchFeat, [In] int BooleanOptions, [In] double DAngle, [In] double DRadius, [In] int BendPosition, [In] double DOffsetDist, [In] int ReliefType, [In] double DReliefRatio, [In] double DReliefWidth, [In] double DReliefDepth);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66256)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertSketchText([In] double Ptx, [In] double Pty, [In] double Ptz, [In][MarshalAs(UnmanagedType.BStr)] string Text, [In] int Alignment, [In] int FlipDirection, [In] int HorizontalMirror, [In] int WidthFactor, [In] int SpaceBetweenChars);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66257)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SketchText IInsertSketchText([In] double Ptx, [In] double Pty, [In] double Ptz, [In][MarshalAs(UnmanagedType.BStr)] string Text, [In] int Alignment, [In] int FlipDirection, [In] int HorizontalMirror, [In] int WidthFactor, [In] int SpaceBetweenChars);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66258)]
+    void DissolveSketchText();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66259)]
+    void MoldDraftAnalysis([In] double Angle, [In] int Options, [In][MarshalAs(UnmanagedType.Struct)] object Colors, [In] int Shows);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66260)]
+    void InsertSheetMetalJog([In] double Angle, [In] double Radius, [In] double OffsetDist, [In] bool FlipDir, [In] bool FixProjLen, [In] short DimPos, [In] short BendPos);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66261)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertSketchForEdgeFlange([In][MarshalAs(UnmanagedType.IDispatch)] object FlangeEdge, [In] double DAngle, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66262)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertSketchForEdgeFlange([In][MarshalAs(UnmanagedType.Interface)] Edge FlangeEdge, [In] double DAngle, [In] bool FlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66263)]
+    void ClearSelection2([In] bool All);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66264)]
+    void ListExternalFileReferences2([MarshalAs(UnmanagedType.Struct)] out object ModelPathName, [MarshalAs(UnmanagedType.Struct)] out object ComponentPathName, [MarshalAs(UnmanagedType.Struct)] out object Feature, [MarshalAs(UnmanagedType.Struct)] out object DataType, [MarshalAs(UnmanagedType.Struct)] out object Status, [MarshalAs(UnmanagedType.Struct)] out object RefEntity, [MarshalAs(UnmanagedType.Struct)] out object FeatCom);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66265)]
+    int ListExternalFileReferencesCount2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66266)]
+    void IListExternalFileReferences2([In] int NumRefs, [MarshalAs(UnmanagedType.BStr)] out string ModelPathName, [MarshalAs(UnmanagedType.BStr)] out string CompPathName, [MarshalAs(UnmanagedType.BStr)] out string Feature, [MarshalAs(UnmanagedType.BStr)] out string DataType, out int Status, [MarshalAs(UnmanagedType.BStr)] out string RefEntity, [MarshalAs(UnmanagedType.BStr)] out string FeatComp);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66267)]
+    bool InsertDeleteFace2([In] int Refill);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66268)]
+    void AddLoftSection();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66269)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertMacroFeature([In][MarshalAs(UnmanagedType.BStr)] string CmdFile, [In][MarshalAs(UnmanagedType.BStr)] string CmdModule, [In][MarshalAs(UnmanagedType.BStr)] string CmdProcedure, [In][MarshalAs(UnmanagedType.Struct)] object ParamNames, [In][MarshalAs(UnmanagedType.Struct)] object ParamTypes, [In][MarshalAs(UnmanagedType.Struct)] object ParamValues, [In][MarshalAs(UnmanagedType.BStr)] string PmFile, [In][MarshalAs(UnmanagedType.BStr)] string PmModule, [In][MarshalAs(UnmanagedType.BStr)] string PmProcedure);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66270)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertMacroFeature([In][MarshalAs(UnmanagedType.BStr)] string CmdFile, [In][MarshalAs(UnmanagedType.BStr)] string CmdModule, [In][MarshalAs(UnmanagedType.BStr)] string CmdProcedure, [In] int ParamCount, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamNames, [In] ref int ParamTypes, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamValues, [In][MarshalAs(UnmanagedType.BStr)] string PmFile, [In][MarshalAs(UnmanagedType.BStr)] string PmModule, [In][MarshalAs(UnmanagedType.BStr)] string PmProcedure);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66271)]
+    void ListAuxiliaryExternalFileReferences([MarshalAs(UnmanagedType.Struct)] out object Feature, [MarshalAs(UnmanagedType.Struct)] out object ExternalFileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66272)]
+    int ListAuxiliaryExternalFileReferencesCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66273)]
+    void IListAuxiliaryExternalFileReferences([In] int NumRefs, [MarshalAs(UnmanagedType.BStr)] out string Feature, [MarshalAs(UnmanagedType.BStr)] out string ExternalFileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66274)]
+    void FeatureCut5([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] int KeepPieceIndex, [In] bool NormalCut);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66275)]
+    void FeatureBoss2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66276)]
+    bool DissolveLibraryFeature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66277)]
+    void FeatureExtruRefSurface2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66278)]
+    void FeatureCutThin2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66279)]
+    void FeatureBossThin2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66280)]
+    void SimpleHole3([In] double Dia, [In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66281)]
+    void EditUndo2([In] int Steps);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66282)]
+    void EditRedo2([In] int Steps);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66283)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddConfiguration3([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66284)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Configuration IAddConfiguration3([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66285)]
+    bool EditConfiguration3([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string NewName, [In][MarshalAs(UnmanagedType.BStr)] string Comment, [In][MarshalAs(UnmanagedType.BStr)] string AlternateName, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66286)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    EquationMgr GetEquationMgr();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66287)]
+    double ClosestDistance([In][MarshalAs(UnmanagedType.IDispatch)] object Object1, [In][MarshalAs(UnmanagedType.IDispatch)] object Object2, [MarshalAs(UnmanagedType.Struct)] out object Point1, [MarshalAs(UnmanagedType.Struct)] out object Point2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66288)]
+    double IClosestDistance([In][MarshalAs(UnmanagedType.IDispatch)] object Object1, [In][MarshalAs(UnmanagedType.IDispatch)] object Object2, out double Point1, out double Point2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66289)]
+    int ReloadOrReplace([In] bool ReadOnly, [In][MarshalAs(UnmanagedType.BStr)] string ReplaceFileName, [In] bool DiscardChanges);
+
+    [DispId(66290)]
+    double FeatureManagerSplitterPosition
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66290)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66290)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66291)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetCustomInfoValue([In][MarshalAs(UnmanagedType.BStr)] string Configuration, [In][MarshalAs(UnmanagedType.BStr)] string FieldName);
+
+    [DispId(66292)]
+    string Printer
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66292)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66292)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(66293)]
+    object PageSetup
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66293)]
+        [return: MarshalAs(UnmanagedType.IDispatch)]
+        get;
+    }
+
+    [DispId(66294)]
+    PageSetup IPageSetup
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66294)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66295)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note InsertStackedBalloon([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66296)]
+    bool SaveAs4([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] int Version, [In] int Options, [In][Out] ref int Errors, [In][Out] ref int Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66297)]
+    bool Save3([In] int Options, [In][Out] ref int Errors, [In][Out] ref int Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66298)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreatePlaneFixed2([In][MarshalAs(UnmanagedType.Struct)] object P1, [In][MarshalAs(UnmanagedType.Struct)] object P2, [In][MarshalAs(UnmanagedType.Struct)] object P3, [In] bool UseGlobal);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66299)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RefPlane ICreatePlaneFixed2([In] ref double P1, [In] ref double P2, [In] ref double P3, [In] bool UseGlobal);
+
+    [DispId(66300)]
+    bool LargeAssemblyMode
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66300)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66300)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66301)]
+    int AddOrEditConfiguration([In][MarshalAs(UnmanagedType.BStr)] string ConfigName, [In][MarshalAs(UnmanagedType.Struct)] object Params, [In][MarshalAs(UnmanagedType.Struct)] object Values);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66302)]
+    int IAddOrEditConfiguration([In][MarshalAs(UnmanagedType.BStr)] string ConfigName, [In] int ParamCount, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamNames, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamValues);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66303)]
+    int ForceReleaseLocks();
+
+    [DispId(66304)]
+    FeatureManager FeatureManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66304)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [DispId(66305)]
+    ModelViewManager ModelViewManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66305)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [DispId(66306)]
+    ModelDocExtension Extension
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66306)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [DispId(66307)]
+    ConfigurationManager ConfigurationManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66307)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [DispId(66308)]
+    SketchManager SketchManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(66308)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66309)]
+    bool EditDimensionProperties3([In] int TolType, [In] double TolMax, [In] double TolMin, [In][MarshalAs(UnmanagedType.BStr)] string TolMaxFit, [In][MarshalAs(UnmanagedType.BStr)] string TolMinFit, [In] bool UseDocPrec, [In] int Precision, [In] int ArrowsIn, [In] bool UseDocArrows, [In] int Arrow1, [In] int Arrow2, [In][MarshalAs(UnmanagedType.BStr)] string PrefixText, [In][MarshalAs(UnmanagedType.BStr)] string SuffixText, [In] bool ShowValue, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText1, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText2, [In] bool CenterText, [In] int ConfigOption, [In][MarshalAs(UnmanagedType.Struct)] object ConfigNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66310)]
+    bool IEditDimensionProperties3([In] int TolType, [In] double TolMax, [In] double TolMin, [In][MarshalAs(UnmanagedType.BStr)] string TolMaxFit, [In][MarshalAs(UnmanagedType.BStr)] string TolMinFit, [In] bool UseDocPrec, [In] int Precision, [In] int ArrowsIn, [In] bool UseDocArrows, [In] int Arrow1, [In] int Arrow2, [In][MarshalAs(UnmanagedType.BStr)] string PrefixText, [In][MarshalAs(UnmanagedType.BStr)] string SuffixText, [In] bool ShowValue, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText1, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText2, [In] bool CenterText, [In] int ConfigOption, [In] int Count, [In][MarshalAs(UnmanagedType.BStr)] ref string ConfigNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66311)]
+    void InsertSketchPictureDatax64([In] int Width, [In] int Height, [In] long PDataIn);
+}
+#if false // Decompilation log
+'166' items in cache
+------------------
+Resolve: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+Found single assembly: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\mscorlib.dll'
+------------------
+Resolve: 'Microsoft.Win32.Registry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'Microsoft.Win32.Registry, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\Microsoft.Win32.Registry.dll'
+------------------
+Resolve: 'System.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.dll'
+------------------
+Resolve: 'System.Security.Principal.Windows, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Principal.Windows, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Principal.Windows.dll'
+------------------
+Resolve: 'System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+Could not find by name: 'System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+------------------
+Resolve: 'System.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.dll'
+------------------
+Resolve: 'System.Collections.NonGeneric, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections.NonGeneric, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.NonGeneric.dll'
+------------------
+Resolve: 'System.Collections.Concurrent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections.Concurrent, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.Concurrent.dll'
+------------------
+Resolve: 'System.ObjectModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.ObjectModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.ObjectModel.dll'
+------------------
+Resolve: 'System.Console, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Console, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Console.dll'
+------------------
+Resolve: 'System.Runtime.InteropServices, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.InteropServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.InteropServices.dll'
+------------------
+Resolve: 'System.Diagnostics.Contracts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.Contracts, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.Contracts.dll'
+------------------
+Resolve: 'System.Diagnostics.StackTrace, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.StackTrace, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.StackTrace.dll'
+------------------
+Resolve: 'System.Diagnostics.Tracing, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.Tracing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.Tracing.dll'
+------------------
+Resolve: 'System.IO.FileSystem.DriveInfo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.FileSystem.DriveInfo, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.FileSystem.DriveInfo.dll'
+------------------
+Resolve: 'System.IO.IsolatedStorage, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.IsolatedStorage, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.IsolatedStorage.dll'
+------------------
+Resolve: 'System.ComponentModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.ComponentModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.ComponentModel.dll'
+------------------
+Resolve: 'System.Threading.Thread, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Thread, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Thread.dll'
+------------------
+Resolve: 'System.Reflection.Emit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.dll'
+------------------
+Resolve: 'System.Reflection.Emit.ILGeneration, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit.ILGeneration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.ILGeneration.dll'
+------------------
+Resolve: 'System.Reflection.Emit.Lightweight, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit.Lightweight, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.Lightweight.dll'
+------------------
+Resolve: 'System.Reflection.Primitives, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Primitives.dll'
+------------------
+Resolve: 'System.Resources.Writer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Resources.Writer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Resources.Writer.dll'
+------------------
+Resolve: 'System.Runtime.CompilerServices.VisualC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.CompilerServices.VisualC, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.CompilerServices.VisualC.dll'
+------------------
+Resolve: 'System.Runtime.Serialization.Formatters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.Serialization.Formatters, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.Serialization.Formatters.dll'
+------------------
+Resolve: 'System.Security.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.AccessControl.dll'
+------------------
+Resolve: 'System.IO.FileSystem.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.FileSystem.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.FileSystem.AccessControl.dll'
+------------------
+Resolve: 'System.Threading.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Could not find by name: 'System.Threading.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+------------------
+Resolve: 'System.Security.Claims, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Claims.dll'
+------------------
+Resolve: 'System.Security.Cryptography, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Cryptography, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Cryptography.dll'
+------------------
+Resolve: 'System.Text.Encoding.Extensions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Text.Encoding.Extensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Text.Encoding.Extensions.dll'
+------------------
+Resolve: 'System.Threading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.dll'
+------------------
+Resolve: 'System.Threading.Overlapped, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Overlapped, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Overlapped.dll'
+------------------
+Resolve: 'System.Threading.ThreadPool, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.ThreadPool, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.ThreadPool.dll'
+------------------
+Resolve: 'System.Threading.Tasks.Parallel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Tasks.Parallel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Tasks.Parallel.dll'
+------------------
+Resolve: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.dll'
+#endif
