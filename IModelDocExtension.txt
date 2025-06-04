@@ -1,0 +1,1872 @@
+#region Assembly SolidWorks.Interop.sldworks, Version=32.1.0.123, Culture=neutral, PublicKeyToken=7c4797c3e4eeac03
+// C:\Users\singh\.nuget\packages\solidworks.interop.sldworks\32.1.0\lib\netstandard2.0\SolidWorks.Interop.sldworks.dll
+// Decompiled with ICSharpCode.Decompiler 8.1.1.7464
+#endregion
+
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace SolidWorks.Interop.sldworks;
+
+[ComImport]
+[Guid("99F4D4AF-F268-4EE1-8C55-041F7BECF879")]
+[TypeLibType(TypeLibTypeFlags.FHidden | TypeLibTypeFlags.FDual | TypeLibTypeFlags.FDispatchable)]
+public interface IModelDocExtension
+{
+    [DispId(1)]
+    ModelDoc2 Document
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(1)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(2)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetMassProperties([In] int Accuracy, [In][Out] ref int Status);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(3)]
+    double IGetMassProperties([In] int Accuracy, [In][Out] ref int Status);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(4)]
+    bool InsertDwgOrDxfFile([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(5)]
+    void PrintOut([In] int FromPage, [In] int ToPage, [In] int Copies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In][MarshalAs(UnmanagedType.BStr)] string PrintFileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(6)]
+    bool SelectByID([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string Type, [In] double X, [In] double Y, [In] double Z, [In] bool Append, [In] int Mark, [In][MarshalAs(UnmanagedType.Interface)] Callout Callout);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(7)]
+    [return: MarshalAs(UnmanagedType.IUnknown)]
+    object IGet3rdPartyStorageStore([In][MarshalAs(UnmanagedType.BStr)] string SubStorageName, [In] bool IsStoring);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(8)]
+    bool IRelease3rdPartyStorageStore([In][MarshalAs(UnmanagedType.BStr)] string SubStorageName);
+
+    [DispId(9)]
+    int UsePageSetup
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(9)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(9)]
+        [param: In]
+        set;
+    }
+
+    [DispId(10)]
+    PageSetup AppPageSetup
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(10)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(11)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetSectionProperties([In][MarshalAs(UnmanagedType.Struct)] object Sections);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(12)]
+    double IGetSectionProperties([In] int Count, [In][MarshalAs(UnmanagedType.IUnknown)] ref object Sections);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(13)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    MassProperty CreateMassProperty();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(14)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    MathTransform GetCoordinateSystemTransformByName([In][MarshalAs(UnmanagedType.BStr)] string NameIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(15)]
+    void SetMaterialPropertyValues([In][MarshalAs(UnmanagedType.Struct)] object Material_property_values, [In] int Config_opt, [In][MarshalAs(UnmanagedType.Struct)] object Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(16)]
+    void ISetMaterialPropertyValues([In] ref double Material_values, [In] int Config_opt, [In] int Config_count, [In][MarshalAs(UnmanagedType.BStr)] ref string Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(17)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetMaterialPropertyValues([In] int Config_opt, [In][MarshalAs(UnmanagedType.Struct)] object Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(18)]
+    double IGetMaterialPropertyValues([In] int Config_opt, [In] int Config_count, [In][MarshalAs(UnmanagedType.BStr)] ref string Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(19)]
+    void PrintOut2([In][MarshalAs(UnmanagedType.Struct)] object PageArray, [In] int Copies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In][MarshalAs(UnmanagedType.BStr)] string PrintFileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(20)]
+    void IPrintOut2([In] int ArraySize, [In] ref int PageArray, [In] int Copies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In][MarshalAs(UnmanagedType.BStr)] string PrintFileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(21)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetPersistReference([In][MarshalAs(UnmanagedType.IDispatch)] object DispObj);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(22)]
+    int GetPersistReferenceCount([In][MarshalAs(UnmanagedType.IDispatch)] object DispObj);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(23)]
+    byte IGetPersistReference([In][MarshalAs(UnmanagedType.IDispatch)] object DipsObj, [In] int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(24)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetObjectByPersistReference([In][MarshalAs(UnmanagedType.Struct)] object PersistId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(25)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object IGetObjectByPersistReference([In] int Count, [In] ref byte PersistId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(26)]
+    [return: MarshalAs(UnmanagedType.IUnknown)]
+    object GetStream([In] int StreamType, out bool ReadOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(27)]
+    bool ReleaseStream([In] int StreamType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(28)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature GetLastFeatureAdded();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(29)]
+    int IMultiSelect([In] int Count, [In][MarshalAs(UnmanagedType.IUnknown)] ref object Objects, [In] bool AppendFlag, [In][MarshalAs(UnmanagedType.Interface)] SelectData Data);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(30)]
+    int MultiSelect([In][MarshalAs(UnmanagedType.Struct)] object Objects, [In] bool AppendFlag, [In][MarshalAs(UnmanagedType.IDispatch)] object Data);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(31)]
+    double GetParameterValue([In][MarshalAs(UnmanagedType.BStr)] string DimName, [In] int Reserved);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(32)]
+    int SetParameterValue([In][MarshalAs(UnmanagedType.BStr)] string DimName, [In] double Value, [In] int Reserved);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(33)]
+    void MoveOrCopy([In] bool Copy, [In] int NumCopies, [In] bool KeepRelations, [In] double BaseX, [In] double BaseY, [In] double BaseZ, [In] double DestX, [In] double DestY, [In] double DestZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(34)]
+    void RotateOrCopy([In] bool Copy, [In] int NumCopies, [In] bool KeepRelations, [In] double BaseX, [In] double BaseY, [In] double BaseZ, [In] double DestX, [In] double DestY, [In] double DestZ, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(35)]
+    void ScaleOrCopy([In] bool Copy, [In] int NumCopies, [In] double BaseX, [In] double BaseY, [In] double BaseZ, [In] double Scale);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(36)]
+    bool ApplyTexture([In] int Scale, [In] double Angle, [In][MarshalAs(UnmanagedType.BStr)] string TextureFilename, [In] bool BlendColor);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(37)]
+    bool RemoveTexture();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(38)]
+    bool RemoveMaterialProperty([In] int Config_opt, [In][MarshalAs(UnmanagedType.Struct)] object Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(39)]
+    bool IRemoveMaterialProperty([In] int Config_opt, [In] int Config_count, [In][MarshalAs(UnmanagedType.BStr)] ref string Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(40)]
+    void RemoveModelColorizer([In][MarshalAs(UnmanagedType.IDispatch)] object PInterface);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(41)]
+    void InstallModelColorizer([In][MarshalAs(UnmanagedType.IDispatch)] object PInterface);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(42)]
+    bool HasDesignTable();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(43)]
+    void ListExternalFileReferences([MarshalAs(UnmanagedType.Struct)] out object ModelPathName, [MarshalAs(UnmanagedType.Struct)] out object ComponentPathName, [MarshalAs(UnmanagedType.Struct)] out object Feature, [MarshalAs(UnmanagedType.Struct)] out object DataType, [MarshalAs(UnmanagedType.Struct)] out object Status, [MarshalAs(UnmanagedType.Struct)] out object RefEntity, [MarshalAs(UnmanagedType.Struct)] out object FeatCom, out int ConfigOption, [MarshalAs(UnmanagedType.BStr)] out string ConfigName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(44)]
+    int ListExternalFileReferencesCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(45)]
+    void IListExternalFileReferences([In] int NumRefs, [MarshalAs(UnmanagedType.BStr)] out string ModelPathName, [MarshalAs(UnmanagedType.BStr)] out string CompPathName, [MarshalAs(UnmanagedType.BStr)] out string Feature, [MarshalAs(UnmanagedType.BStr)] out string DataType, out int Status, [MarshalAs(UnmanagedType.BStr)] out string RefEntity, [MarshalAs(UnmanagedType.BStr)] out string FeatComp, out int ConfigOption, [MarshalAs(UnmanagedType.BStr)] out string ConfigName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(46)]
+    void UpdateExternalFileReferences([In] int ConfigOption, [In][MarshalAs(UnmanagedType.BStr)] string ConfigName, [In] int UpdateStatus);
+
+    [DispId(47)]
+    bool NeedsRebuild
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(47)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(48)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SFSymbol InsertSurfaceFinishSymbol3([In] int SymType, [In] int LeaderType, [In] double LocX, [In] double LocY, [In] double LocZ, [In] int LaySymbol, [In] int ArrowType, [In][MarshalAs(UnmanagedType.BStr)] string MachAllowance, [In][MarshalAs(UnmanagedType.BStr)] string OtherVals, [In][MarshalAs(UnmanagedType.BStr)] string ProdMethod, [In][MarshalAs(UnmanagedType.BStr)] string SampleLen, [In][MarshalAs(UnmanagedType.BStr)] string MaxRoughness, [In][MarshalAs(UnmanagedType.BStr)] string MinRoughness, [In][MarshalAs(UnmanagedType.BStr)] string RoughnessSpacing);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(49)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DatumTargetSym InsertDatumTargetSymbol2([In][MarshalAs(UnmanagedType.BStr)] string Datum1, [In][MarshalAs(UnmanagedType.BStr)] string Datum2, [In][MarshalAs(UnmanagedType.BStr)] string Datum3, [In] short AreaStyle, [In] bool AreaOutside, [In] double Value1, [In] double Value2, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr1, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr2, [In] bool ArrowsSmart, [In] short ArrowStyle, [In] short LeaderLineStyle, [In] bool LeaderBent, [In] bool ShowArea, [In] bool ShowSymbol);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(50)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Texture GetTexture([In][MarshalAs(UnmanagedType.BStr)] string Config_name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(51)]
+    bool SetTexture([In][MarshalAs(UnmanagedType.BStr)] string Config_name, [In][MarshalAs(UnmanagedType.Interface)] Texture TextureIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(52)]
+    bool RemoveTexture2([In][MarshalAs(UnmanagedType.BStr)] string Config_name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(53)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Texture CreateTexture([In][MarshalAs(UnmanagedType.BStr)] string MatName, [In] double Scale, [In] double Angle, [In] bool Blend);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(54)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetObjectByPersistReference2([In][MarshalAs(UnmanagedType.Struct)] object PersistId, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(55)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object IGetObjectByPersistReference2([In] int Count, [In] ref byte PersistId, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(56)]
+    int GetAnnotationCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(57)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetAnnotations();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(58)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Annotation IGetAnnotations([In] int NumAnnotations);
+
+    [DispId(59)]
+    bool ViewDisplayRealView
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(59)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(59)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(60)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Annotation InsertAnnotationFavorite([In][MarshalAs(UnmanagedType.BStr)] string BstrFileName, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(61)]
+    bool InsertAttachment([In][MarshalAs(UnmanagedType.BStr)] string FileName, [In] bool Linked);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(62)]
+    bool DeleteAttachment([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(63)]
+    int GetAttachmentCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(64)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetAttachments([MarshalAs(UnmanagedType.Struct)] out object LinkedVar);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IGetAttachments([In] int NumAttachments, out bool LinkedArr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetSectionProperties2([In][MarshalAs(UnmanagedType.Struct)] object Sections);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(67)]
+    double IGetSectionProperties2([In] int Count, [In][MarshalAs(UnmanagedType.IUnknown)] ref object Sections);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(68)]
+    bool SelectByID2([In][MarshalAs(UnmanagedType.BStr)] string Name, [In][MarshalAs(UnmanagedType.BStr)] string Type, [In] double X, [In] double Y, [In] double Z, [In] bool Append, [In] int Mark, [In][MarshalAs(UnmanagedType.Interface)] Callout Callout, [In] int SelectOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(69)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SwOLEObject CreateOLEObject([In] int Aspect, [In][MarshalAs(UnmanagedType.Struct)] object Position, [In][MarshalAs(UnmanagedType.Struct)] object Buffer, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(70)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SwOLEObject ICreateOLEObject([In] int Aspect, [In] ref double Position, [In] int ByteCount, [In] ref byte Buffer, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(71)]
+    int GetOLEObjectCount([In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(72)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetOLEObjects([In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(73)]
+    void IGetOLEObjects([In] int Options, [In] int OleObjectCount, [MarshalAs(UnmanagedType.Interface)] out SwOLEObject LpOleObjects);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(74)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Camera InsertCamera();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(75)]
+    int GetCameraCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(76)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Camera GetCameraById([In] int CameraId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(77)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    SwOLEObject InsertObjectFromFile([In][MarshalAs(UnmanagedType.BStr)] string FilePath, [In] bool CreateLink, [In] int Aspect, [In] double XPos, [In] double YPos, [In] double ZPos);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(78)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Comment AddComment([In][MarshalAs(UnmanagedType.BStr)] string Text);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(79)]
+    bool DeleteSelection2([In] int DeleteOptions);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(80)]
+    void SetSceneBkgDIBx64([In] long L_dib);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(81)]
+    long GetSceneBkgDIBx64();
+
+    [DispId(82)]
+    bool ClearLastActiveConfigModel
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(82)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(82)]
+        [param: In]
+        set;
+    }
+
+    [DispId(83)]
+    CustomPropertyManager CustomPropertyManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(83)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(84)]
+    bool RunCommand([In] int CommandID, [In][MarshalAs(UnmanagedType.BStr)] string NewTitle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(85)]
+    void StartRecordingUndoObject();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(86)]
+    bool FinishRecordingUndoObject([In][MarshalAs(UnmanagedType.BStr)] string UndoObjectName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(87)]
+    void SetVisibleBox([In][MarshalAs(UnmanagedType.Interface)] MathPoint UpperLeft, [In][MarshalAs(UnmanagedType.Interface)] MathPoint LowerRight);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(88)]
+    bool GetVisibleBox([MarshalAs(UnmanagedType.Interface)] out MathPoint UpperLeft, [MarshalAs(UnmanagedType.Interface)] out MathPoint LowerRight);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(89)]
+    void RemoveVisibleBox();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(90)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Camera GetCameraDefinition();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(91)]
+    int AddOrdinateDimension([In] int DimType, [In] double LocX, [In] double LocY, [In] double LocZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(92)]
+    int GetUserPreferenceDoubleValueRange([In] int UserPref, [In][Out] ref double Value, [In][Out] ref double MinValue, [In][Out] ref double MaxValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(93)]
+    bool SaveAs([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] int Version, [In] int Options, [In][MarshalAs(UnmanagedType.IDispatch)] object ExportData, [In][Out] ref int Errors, [In][Out] ref int Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(94)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetCorrespondingEntity([In][MarshalAs(UnmanagedType.IDispatch)] object Entity);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(95)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetCorresponding([In][MarshalAs(UnmanagedType.IDispatch)] object InputObject);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(96)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Print3DDialog GetPrint3DDialog();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(97)]
+    void DeleteFeatureMgrViewx64([In] ref long AppView);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(98)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetPersistReference3([In][MarshalAs(UnmanagedType.IDispatch)] object DispObj);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(99)]
+    int GetPersistReferenceCount3([In][MarshalAs(UnmanagedType.IDispatch)] object DispObj);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(100)]
+    byte IGetPersistReference3([In][MarshalAs(UnmanagedType.IDispatch)] object DipsObj, [In] int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(101)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetObjectByPersistReference3([In][MarshalAs(UnmanagedType.Struct)] object PersistId, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(102)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object IGetObjectByPersistReference3([In] int Count, [In] ref byte PersistId, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(103)]
+    bool SetApiUndoObject([In][MarshalAs(UnmanagedType.IDispatch)] object PHandler, [In][MarshalAs(UnmanagedType.BStr)] string DisplayName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(104)]
+    bool AddOrUpdateSearchData([In][MarshalAs(UnmanagedType.BStr)] string AppName, [In][MarshalAs(UnmanagedType.BStr)] string AppKeyword, [In][MarshalAs(UnmanagedType.BStr)] string AppValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(105)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    AnnotationView InsertAnnotationView([In] int AnnotationViewingDirection, [In][MarshalAs(UnmanagedType.IDispatch)] object DirectionReference, [In] bool FlipDirection, [In][MarshalAs(UnmanagedType.IDispatch)] object HorizontalDirectionReference, [In] int AngleMadeWithHorizontal);
+
+    [DispId(106)]
+    int AnnotationViewCount
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(106)]
+        get;
+    }
+
+    [DispId(107)]
+    object AnnotationViews
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(107)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(108)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    AnnotationView IGetAnnotationViews([In] int AnnotationViewCount);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(109)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Measure CreateMeasure();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(110)]
+    void BreakAllExternalFileReferences2([In] bool InsertFeatures);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(111)]
+    bool InsertScene([In][MarshalAs(UnmanagedType.BStr)] string SceneDefinitionFile);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(112)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    ModelView GetModelView([In] int WindowID, [In] int Row, [In] int Col);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(113)]
+    int GetDecalsCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(114)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetDecals();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(115)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Decal IGetDecals([In] int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(116)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Decal CreateDecal();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(117)]
+    bool AddDecal([In][MarshalAs(UnmanagedType.Interface)] Decal PDecal, out int DecalID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(118)]
+    bool DeleteDecal([In] int DecalID, [In] bool BReassignIdsAndInvalidate);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(119)]
+    bool HideDecal([In] int DecalID, [In] bool Hide);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(120)]
+    bool DeleteAllDecals();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(121)]
+    bool MoveDecal([In] int DecalID, [In] bool MoveUp);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(122)]
+    bool ReverseDecalsOrder([In] int DecalID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(123)]
+    int GetRenderMaterialsCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(124)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetRenderMaterials();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(125)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RenderMaterial IGetRenderMaterials([In] int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(126)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RenderMaterial CreateRenderMaterial([In][MarshalAs(UnmanagedType.BStr)] string PathName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(127)]
+    bool AddRenderMaterial([In][MarshalAs(UnmanagedType.Interface)] RenderMaterial PRenderMaterial, out int PwMaterialId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(128)]
+    bool DeleteRenderMaterial([In] int PwMaterialId, [In] bool BReassignIdsAndInvalidate);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(129)]
+    void UpdateRenderMaterialsInSceneGraph([In] bool AddToSG);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(130)]
+    void GetAdvancedSpotLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, out double Exponent, out double AttenuationConst, out double AttenuationLinear, out double AttenuationQuad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(131)]
+    void SetAdvancedSpotLightProperties([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] double Exponent, [In] double AttenuationConst, [In] double AttenuationLinear, [In] double AttenuationQuad);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(132)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Decal GetDecal([In] int ID, [In][MarshalAs(UnmanagedType.BStr)] string Configuration);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(133)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    RenderMaterial GetMaterial([In] int ID, [In][MarshalAs(UnmanagedType.BStr)] string Configuration);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(134)]
+    void SetKeepLightInRenderScene([In] int ID, [In] bool Val);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(135)]
+    bool GetKeepLightInRenderScene([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(136)]
+    bool AddDefaultRenderMaterial([In][MarshalAs(UnmanagedType.Interface)] RenderMaterial PRenderMaterial, out int PwMaterialId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(137)]
+    void SetLightEnabledInRender([In] int ID, [In] bool Val);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(138)]
+    bool GetLightEnabledInRender([In] int ID);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(139)]
+    void DeleteScene();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(140)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetMotionStudyManager();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(141)]
+    int GetSearchDataCount([In][MarshalAs(UnmanagedType.BStr)] string AppName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(142)]
+    int GetSearchData([In][MarshalAs(UnmanagedType.BStr)] string AppName, [In][Out][MarshalAs(UnmanagedType.Struct)] ref object AppNames, [In][Out][MarshalAs(UnmanagedType.Struct)] ref object NodeNames, [In][Out][MarshalAs(UnmanagedType.Struct)] ref object NodeValues);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(143)]
+    void IGetSearchData([In][MarshalAs(UnmanagedType.BStr)] string AppName, [In] int Count, [In][Out][MarshalAs(UnmanagedType.BStr)] ref string AppNames, [In][Out][MarshalAs(UnmanagedType.BStr)] ref string NodeNames, [In][Out][MarshalAs(UnmanagedType.BStr)] ref string NodeValues);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(144)]
+    bool DeleteSearchData([In][MarshalAs(UnmanagedType.BStr)] string AppName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(145)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string IsVirtualComponent();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(146)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object IsVirtualComponent2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(147)]
+    bool IsVirtualComponent3([MarshalAs(UnmanagedType.Struct)] out object PathChain, [MarshalAs(UnmanagedType.Struct)] out object TitleChain);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(148)]
+    bool ChangeSketchPlane([In] int Config_opt, [In][MarshalAs(UnmanagedType.Struct)] object Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(149)]
+    bool IChangeSketchPlane([In] int Config_opt, [In] int Config_count, [In][MarshalAs(UnmanagedType.BStr)] ref string Config_names);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(150)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Callout CreateCallout([In] int NumberOfRows, [In][MarshalAs(UnmanagedType.IDispatch)] object Handler);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(151)]
+    bool CreatePresentation([In][MarshalAs(UnmanagedType.BStr)] string PathName, [In][MarshalAs(UnmanagedType.BStr)] string ThemeXML, [In] int Options, [In][MarshalAs(UnmanagedType.Struct)] object TextNameArray, [In][MarshalAs(UnmanagedType.Struct)] object TextArray, [In][MarshalAs(UnmanagedType.Struct)] object TextureArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(152)]
+    void Stretch([In] bool KeepRelations, [In] double BaseX, [In] double BaseY, [In] double DestX, [In] double DestY);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(153)]
+    void StartFormatPainter();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(154)]
+    void StopFormatPainter();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(155)]
+    bool JogDimension([In] bool Jog, [In] short WitnessIndex);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(156)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetNamedViewRotation([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(157)]
+    double IGetNamedViewRotation([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(158)]
+    bool GetUserPreferenceToggle([In] int UserPref, [In] int UserPrefOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(159)]
+    bool SetUserPreferenceToggle([In] int UserPref, [In] int UserPrefOption, [In] bool Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(160)]
+    int GetUserPreferenceInteger([In] int UserPref, [In] int UserPrefOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(161)]
+    bool SetUserPreferenceInteger([In] int UserPref, [In] int UserPrefOption, [In] int Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(162)]
+    double GetUserPreferenceDouble([In] int UserPref, [In] int UserPrefOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(163)]
+    bool SetUserPreferenceDouble([In] int UserPref, [In] int UserPrefOption, [In] double Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(164)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetUserPreferenceString([In] int UserPref, [In] int UserPrefOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(165)]
+    bool SetUserPreferenceString([In] int UserPref, [In] int UserPrefOption, [In][MarshalAs(UnmanagedType.BStr)] string Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(166)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TextFormat GetUserPreferenceTextFormat([In] int UserPref, [In] int UserPrefOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(167)]
+    bool SetUserPreferenceTextFormat([In] int UserPref, [In] int UserPrefOption, [In][MarshalAs(UnmanagedType.Interface)] TextFormat Value);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(168)]
+    void ShowSmartMessage([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] int TimeInMillSec, [In] bool ShowInStatusBar, [In] bool RemoveDefaultTip);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(169)]
+    void ApplyFormatPainterToAll();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(170)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    BomTableAnnotation InsertBomTable([In][MarshalAs(UnmanagedType.BStr)] string TemplateName, [In] int X, [In] int Y, [In] int BomType, [In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName);
+
+    [DispId(171)]
+    string FeatureManagerFilterString
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(171)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(171)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(172)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetDraftingStandardNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(173)]
+    bool LoadDraftingStandard([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(174)]
+    bool SaveDraftingStandard([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(175)]
+    bool RenameDraftingStandard([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(176)]
+    bool CopyDraftingStandard([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(177)]
+    bool DeleteDraftingStandard();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(178)]
+    bool IsConverted();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(179)]
+    int GetLicenseType();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(180)]
+    int GetModelViewCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(181)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetModelViews();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(182)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    ModelView IGetModelViews([In] int NumModelViews);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(183)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object FindTrackedObjects([In] int TrackingCookie, [In][MarshalAs(UnmanagedType.IDispatch)] object SearchObject, [In][MarshalAs(UnmanagedType.Struct)] object TypesFilter, [In][MarshalAs(UnmanagedType.Struct)] object TrackingIDs);
+
+    [DispId(184)]
+    bool IncludeMassPropertiesOfHiddenBodies
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(184)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(184)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(185)]
+    int GetWhatsWrongCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(186)]
+    bool GetWhatsWrong([MarshalAs(UnmanagedType.Struct)] out object Features, [MarshalAs(UnmanagedType.Struct)] out object ErrorCodes, [MarshalAs(UnmanagedType.Struct)] out object Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(187)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetFlattenSheetMetalPersistReference([In][MarshalAs(UnmanagedType.IDispatch)] object DispObj);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(188)]
+    byte IGetFlattenSheetMetalPersistReference([In][MarshalAs(UnmanagedType.IDispatch)] object DispObj, [In] int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(189)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetSheetMetalObjectsByPersistReference([In][MarshalAs(UnmanagedType.Struct)] object PersistId, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(190)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object IGetSheetMetalObjectsByPersistReference([In] int Count, [In] ref byte PersistId, out int ErrorCode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(191)]
+    bool SketchBoxSelect([In] double FirstPtX, [In] double FirstPtY, [In] double FirstPtZ, [In] double SecondPtX, [In] double SecondPtY, [In] double SecondPtZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(192)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertBOMBalloon([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText, [In] double CustomSize, [In] bool ShowQuantity, [In] short QuantityPlacement, [In][MarshalAs(UnmanagedType.BStr)] string QuantityDenotationText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(193)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note InsertStackedBalloon([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText, [In] double CustomSize, [In] bool ShowQuantity, [In] short QuantityPlacement, [In][MarshalAs(UnmanagedType.BStr)] string QuantityDenotationText);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(194)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object EditBalloonProperties([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText, [In] double CustomSize, [In] bool ShowQuantity, [In] short QuantityPlacement, [In][MarshalAs(UnmanagedType.BStr)] string QuantityDenotationText);
+
+    [DispId(195)]
+    DimXpertManager DimXpertManager
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(195)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(196)]
+    int IsSamePersistentID([In][MarshalAs(UnmanagedType.Struct)] object PersistentID1, [In][MarshalAs(UnmanagedType.Struct)] object PersistentID2);
+
+    [DispId(197)]
+    bool LinkedDisplayState
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(197)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(197)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(198)]
+    bool PurgeDisplayState();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(199)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TitleBlockTableAnnotation InsertTitleBlockTable([In][MarshalAs(UnmanagedType.BStr)] string TemplateName, [In] int X, [In] int Y);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(200)]
+    bool SaveDeFeaturedFile([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(201)]
+    bool InsertDeleteFace([In] int Option);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(202)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    BomTableAnnotation InsertBomTable2([In][MarshalAs(UnmanagedType.BStr)] string TemplateName, [In] int X, [In] int Y, [In] int BomType, [In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName, [In] bool Hidden);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(203)]
+    bool SetTextureByDisplayState([In][MarshalAs(UnmanagedType.BStr)] string DisplayStateName, [In][MarshalAs(UnmanagedType.Interface)] Texture TextureIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(204)]
+    bool RemoveTextureByDisplayState([In][MarshalAs(UnmanagedType.BStr)] string DisplayStateName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(205)]
+    void PrintOut3([In][MarshalAs(UnmanagedType.Struct)] object PageArray, [In] int Copies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In][MarshalAs(UnmanagedType.BStr)] string PrintFileName, [In] bool ConvertToHighQuality);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(206)]
+    void IPrintOut3([In] int ArraySize, [In] ref int PageArray, [In] int Copies, [In] bool Collate, [In][MarshalAs(UnmanagedType.BStr)] string Printer, [In][MarshalAs(UnmanagedType.BStr)] string PrintFileName, [In] bool ConvertToHighQuality);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(207)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    PackAndGo GetPackAndGo();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(208)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object SavePackAndGo([In][MarshalAs(UnmanagedType.Interface)] PackAndGo PackAndGo);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(209)]
+    bool AddDisplayStateSpecificRenderMaterial([In][MarshalAs(UnmanagedType.Interface)] RenderMaterial PRenderMaterial, [In] int DisplayStateOption, [In][MarshalAs(UnmanagedType.Struct)] object DisplayStateNames, out int PWMaterialId1, out int PWMaterialId2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(210)]
+    bool IAddDisplayStateSpecificRenderMaterial([In][MarshalAs(UnmanagedType.Interface)] RenderMaterial PRenderMaterial, [In] int DisplayStateOption, [In] int DisplayStateCount, [In][MarshalAs(UnmanagedType.BStr)] ref string DisplayStateNames, out int PWMaterialId1, out int PWMaterialId2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(211)]
+    bool DeleteDisplayStateSpecificRenderMaterial([In][MarshalAs(UnmanagedType.Struct)] object PWMaterialId1, [In][MarshalAs(UnmanagedType.Struct)] object PWMaterialId2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(212)]
+    bool IDeleteDisplayStateSpecificRenderMaterial([In] int IdCount, [In] ref int PWMaterialId1, [In] ref int PWMaterialId2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(213)]
+    void CreatePresentation2([In][MarshalAs(UnmanagedType.BStr)] string PathName, [In][MarshalAs(UnmanagedType.BStr)] string ThemeXML, [In] int Options, [In][MarshalAs(UnmanagedType.Struct)] object NamedViewArray, [In][MarshalAs(UnmanagedType.Struct)] object TextNameArray, [In][MarshalAs(UnmanagedType.Struct)] object TextArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(214)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetActivePropertyManagerPage();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(215)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetRenderCustomReferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(216)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetRenderStockReferences();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(217)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetRoutingComponentManager();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(218)]
+    bool HideFeatureManager([In] bool Hide);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(219)]
+    bool AlignDimensions([In] int AlignType, [In] double SpaceValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(220)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    StackedBalloonOptions CreateStackedBalloonOptions();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(221)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note InsertStackedBalloon2([In][MarshalAs(UnmanagedType.Interface)] StackedBalloonOptions BalloonOptions);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(222)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    BalloonOptions CreateBalloonOptions();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(223)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note InsertBOMBalloon2([In][MarshalAs(UnmanagedType.Interface)] BalloonOptions BalloonOptions);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(224)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DisplayStateSetting GetDisplayStateSetting([In] int Option);
+
+    [DispId(225)]
+    object DisplayMode
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(225)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(225)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.Struct)]
+        set;
+    }
+
+    [DispId(226)]
+    object Visibility
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(226)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(226)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.Struct)]
+        set;
+    }
+
+    [DispId(227)]
+    object Transparency
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(227)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(227)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.Struct)]
+        set;
+    }
+
+    [DispId(228)]
+    object DisplayStateSpecMaterialPropertyValues
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(228)]
+        [return: MarshalAs(UnmanagedType.Struct)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(228)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.Struct)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(229)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    AppearanceSetting GetAppearanceSetting();
+
+    [DispId(230)]
+    int NeedsRebuild2
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(230)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(231)]
+    int UpdateFrozenFeatures([In] bool UpdateAllConfigs);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(232)]
+    void SelectAll();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(233)]
+    int MultiSelect2([In][MarshalAs(UnmanagedType.Struct)] object Objects, [In] bool AppendFlag, [In][MarshalAs(UnmanagedType.IDispatch)] object Data);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(234)]
+    bool IsFutureVersion();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(235)]
+    bool FinishRecordingUndoObject2([In][MarshalAs(UnmanagedType.BStr)] string UndoObjectName, [In] bool MakeHidden);
+
+    [DispId(236)]
+    int FlyoutFeatureTreeVisibility
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(236)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(236)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(237)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    BomTableAnnotation InsertBomTable3([In][MarshalAs(UnmanagedType.BStr)] string TemplateName, [In] int X, [In] int Y, [In] int BomType, [In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName, [In] bool Hidden, [In] int IndentedNumberingType, [In] bool DetailedCutList);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(238)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetCostingManager();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(239)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetSustainability();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(240)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetTemplateSheetMetal();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(241)]
+    void Create3DBoundingBox();
+
+    [DispId(242)]
+    int ToolboxPartType
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(242)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(242)]
+        [param: In]
+        set;
+    }
+
+    [DispId(243)]
+    string ActiveCommandTab
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(243)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(243)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [DispId(244)]
+    int ActiveCommandTabIndex
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(244)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(244)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(245)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetCommandTabs();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(246)]
+    bool Rebuild([In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(247)]
+    bool GetSunLightSourcePropertyValues([MarshalAs(UnmanagedType.Interface)] out MathVector NorthDirection, out double NorthLatitude, out double EastLongitude, out double TimeZone, [MarshalAs(UnmanagedType.BStr)] out string DateTime);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(248)]
+    bool SetSunLightSourcePropertyValues([In][MarshalAs(UnmanagedType.Interface)] MathVector NorthDirection, [In] double NorthLatitude, [In] double EastLongitude, [In] double TimeZone, [In][MarshalAs(UnmanagedType.BStr)] string DateTime);
+
+    [DispId(249)]
+    bool CommandTabVisible
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(249)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(249)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(250)]
+    bool UpdateStandardViews([In][MarshalAs(UnmanagedType.BStr)] string ViewName, [In] int ViewId);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(251)]
+    bool ResetStandardViews();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(252)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TableAnnotation InsertGeneralTableAnnotation([In] bool UseAnchorPoint, [In] double X, [In] double Y, [In] int AnchorType, [In][MarshalAs(UnmanagedType.BStr)] string TableTemplate, [In] int Rows, [In] int Columns);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(253)]
+    bool EditDimensionProperties([In] int TolType, [In] double TolMax, [In] double TolMin, [In][MarshalAs(UnmanagedType.BStr)] string TolMaxFit, [In][MarshalAs(UnmanagedType.BStr)] string TolMinFit, [In] bool UseDocPrec, [In] int Precision, [In] int ArrowsIn, [In] bool UseDocArrows, [In] int Arrow1, [In] int Arrow2, [In][MarshalAs(UnmanagedType.BStr)] string PrefixText, [In][MarshalAs(UnmanagedType.BStr)] string SuffixText, [In] bool ShowValue, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText1, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText2, [In][MarshalAs(UnmanagedType.BStr)] string DimensionLowerText, [In] bool CenterText, [In] int ConfigOption, [In][MarshalAs(UnmanagedType.Struct)] object ConfigNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(254)]
+    bool IEditDimensionProperties([In] int TolType, [In] double TolMax, [In] double TolMin, [In][MarshalAs(UnmanagedType.BStr)] string TolMaxFit, [In][MarshalAs(UnmanagedType.BStr)] string TolMinFit, [In] bool UseDocPrec, [In] int Precision, [In] int ArrowsIn, [In] bool UseDocArrows, [In] int Arrow1, [In] int Arrow2, [In][MarshalAs(UnmanagedType.BStr)] string PrefixText, [In][MarshalAs(UnmanagedType.BStr)] string SuffixText, [In] bool ShowValue, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText1, [In][MarshalAs(UnmanagedType.BStr)] string CalloutText2, [In][MarshalAs(UnmanagedType.BStr)] string DimensionLowerText, [In] bool CenterText, [In] int ConfigOption, [In] int Count, [In][MarshalAs(UnmanagedType.BStr)] ref string ConfigNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(255)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object AddAngularRunningDim([In] bool DisplayAsChain, [In] bool RunBidirectionally, [In] bool ExtensionLineExtendsFromCenterOfSet, [In] double LocX, [In] double LocY, [In] double LocZ, out int Retval);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(256)]
+    void AlignRunningDimension();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(257)]
+    void ReJogRunningDimension();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(258)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddPathLengthDim([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(259)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object EditBalloonProperties2([In] int Style, [In] int Size, [In] int UpperTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string UpperText, [In] int LowerTextStyle, [In][MarshalAs(UnmanagedType.BStr)] string LowerText, [In] double CustomSize, [In] bool ShowQuantity, [In] short QuantityPlacement, [In][MarshalAs(UnmanagedType.BStr)] string QuantityDenotationText, [In] double QuantityDistance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(260)]
+    int GetObjectId([In][MarshalAs(UnmanagedType.Interface)] Annotation Annotation);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(261)]
+    bool IsAbbreviatedViewActive();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(262)]
+    bool ReorderFeature([In][MarshalAs(UnmanagedType.BStr)] string FeatureToMove, [In][MarshalAs(UnmanagedType.BStr)] string TargetFeature, [In] int MoveLocation);
+
+    [DispId(263)]
+    bool ShowPartRebuildIndicators
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(263)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(263)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(264)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    View3D Capture3DView();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(265)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    View3D Get3DView([In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(266)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object Get3DViews();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(267)]
+    void Refresh3DViews();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(268)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetPrintSpecification();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(269)]
+    void PrintOut4([In][MarshalAs(UnmanagedType.BStr)] string Printer, [In][MarshalAs(UnmanagedType.BStr)] string PrintFileName, [In][MarshalAs(UnmanagedType.IDispatch)] object PrintSpecification);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(270)]
+    int GetRenderMaterialsCount2([In] int DisplayStateOption, [In][MarshalAs(UnmanagedType.Struct)] object DisplayStateNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(271)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetRenderMaterials2([In] int DisplayStateOption, [In][MarshalAs(UnmanagedType.Struct)] object DisplayStateNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(272)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetScanto3D();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(273)]
+    bool HasMaterialPropertyValues();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(274)]
+    bool GetSunLightAdvancedPropertyValues(out double Haze, out double SunDiameter, out int GroundAlbedo, out double SkyGamma);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(275)]
+    bool SetSunLightAdvancedPropertyValues([In] double Haze, [In] double SunDiameter, [In] int GroundAlbedo, [In] double SkyGamma);
+
+    [DispId(276)]
+    double SunLightInformation
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(276)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(277)]
+    bool UpdateSunLight();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(278)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object Get3DViewNames();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(279)]
+    int Get3DViewCount();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(280)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddDimension([In] double X, [In] double Y, [In] double Z, [In] int Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(281)]
+    int GetModelBreakViewNames([MarshalAs(UnmanagedType.Struct)] out object Views);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(282)]
+    bool ShowModelBreakView([In] bool ShowView, [In][MarshalAs(UnmanagedType.BStr)] string ViewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(283)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddSymmetricDimension([In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(284)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TableAnnotation GetGeneralTableAnnotation([In] bool UseAnchorPoint, [In] double X, [In] double Y, [In] int AnchorType, [In][MarshalAs(UnmanagedType.BStr)] string TableTemplate, [In] int Rows, [In] int Columns);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(285)]
+    int PublishTo3DPDF([In][MarshalAs(UnmanagedType.IDispatch)] object MBDPdfData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(286)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetMassProperties2([In] int Accuracy, out int Status, [In] bool UseSelected);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(287)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetMBD3DPdfData();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(288)]
+    int RenameDocument([In][MarshalAs(UnmanagedType.BStr)] string NewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(289)]
+    bool HasRenamedDocuments();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(290)]
+    bool IsExploded([MarshalAs(UnmanagedType.BStr)] out string ViewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(291)]
+    void ViewZoomToSheet();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(292)]
+    bool SketchOffsetOnSurface([In] double Offset, [In] bool Reverse, [In] bool UseFront, [In] bool MakeConstruct);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(293)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object SaveSelection(out int Status);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(294)]
+    bool EditRebuildAll();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(295)]
+    bool ForceRebuildAll();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(296)]
+    int PublishSTEP242File([In][MarshalAs(UnmanagedType.BStr)] string Path);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(297)]
+    bool SelectByRay([In] double WorldX, [In] double WorldY, [In] double WorldZ, [In] double RayVecX, [In] double RayVecY, [In] double RayVecZ, [In] double RayRadius, [In] int TypeWanted, [In] bool Append, [In] int Mark, [In] int Option);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(298)]
+    bool Compare3DPMI([In][MarshalAs(UnmanagedType.BStr)] string ReferenceDocument, [In][MarshalAs(UnmanagedType.BStr)] string ModifiedDocument, [In][MarshalAs(UnmanagedType.BStr)] string ReportName, [In][MarshalAs(UnmanagedType.BStr)] string ReportFolderPath, [In] int ReportSaveOptions);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(299)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateAdvancedHoleElementData([In] int ElmType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(300)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object AddSpecificDimension([In] double X, [In] double Y, [In] double Z, [In] int DimensionType, [In][Out] ref int Error);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(301)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    GeneralToleranceTableAnnotation InsertGeneralToleranceTableAnnotation([In][MarshalAs(UnmanagedType.BStr)] string TemplateName, [In] int X, [In] int Y);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(302)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetCalloutVariableString([In] int Variable);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(303)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetCorresponding2([In][MarshalAs(UnmanagedType.IDispatch)] object InputObject);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(304)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetCorrespondingEntity2([In][MarshalAs(UnmanagedType.IDispatch)] object Entity);
+
+    [DispId(305)]
+    string CustomPropertyBuilderTemplate
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(305)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(305)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(306)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetDependencies([In] bool Traverseflag, [In] bool Searchflag, [In] bool AddReadOnlyInfo, [In] bool ListBrokenRefs, [In] bool AppendImportedPaths);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(307)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    DatumTargetSym InsertDatumTargetSymbol3([In][MarshalAs(UnmanagedType.BStr)] string Datum1, [In][MarshalAs(UnmanagedType.BStr)] string Datum2, [In][MarshalAs(UnmanagedType.BStr)] string Datum3, [In] int AreaStyle, [In] bool AreaOutside, [In] double Value1, [In] double Value2, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr1, [In][MarshalAs(UnmanagedType.BStr)] string ValueStr2, [In] bool ArrowsSmart, [In] int ArrowStyle, [In] int LeaderLineStyle, [In] bool LeaderBent, [In] bool ShowArea, [In] bool ShowSymbol, [In] int MoveableDatumStyle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(308)]
+    bool SetTopLevelTransparency([In] bool InValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(309)]
+    int RayIntersections([In][MarshalAs(UnmanagedType.Struct)] object BodiesIn, [In][MarshalAs(UnmanagedType.Struct)] object BasePointsIn, [In][MarshalAs(UnmanagedType.Struct)] object VectorsIn, [In] int Options, [In] double HitRadius, [In] double Offset, [In] bool HighPrecision);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(310)]
+    bool GeodesicSketchOffset([In] double Offset, [In] bool Reverse, [In] bool MakeConstruct);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(311)]
+    bool UpgradeLegacyCThreads();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(312)]
+    bool SaveAs2([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] int Version, [In] int Options, [In][MarshalAs(UnmanagedType.IDispatch)] object ExportData, [In][MarshalAs(UnmanagedType.BStr)] string ReferencePrefixOrSuffixText, [In] bool AddTextAsPrefix, [In][Out] ref int Errors, [In][Out] ref int Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(313)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateMassProperty2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(314)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetAdvancedSaveAsOptions([In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(315)]
+    bool SaveAs3([In][MarshalAs(UnmanagedType.BStr)] string Name, [In] int Version, [In] int Options, [In][MarshalAs(UnmanagedType.IDispatch)] object ExportData, [In][MarshalAs(UnmanagedType.IDispatch)] object AdvancedSaveAsOptions, [In][Out] ref int Errors, [In][Out] ref int Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(316)]
+    bool SaveTo3DExperience([In][MarshalAs(UnmanagedType.IDispatch)] object Options, [In][Out] ref int Errors, [In][Out] ref int Warnings);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(317)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string GetPLMID();
+
+    [DispId(318)]
+    string DisplayTitle
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(318)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(318)]
+        [param: In]
+        [param: MarshalAs(UnmanagedType.BStr)]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(319)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object InsertChainDimensions([In][MarshalAs(UnmanagedType.Struct)] object Entities);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(320)]
+    int Get3DExperienceModelType();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(321)]
+    void ListExternalFileReferences2([MarshalAs(UnmanagedType.Struct)] out object ModelPathName, [MarshalAs(UnmanagedType.Struct)] out object ComponentPathName, [MarshalAs(UnmanagedType.Struct)] out object Feature, [MarshalAs(UnmanagedType.Struct)] out object DataType, [MarshalAs(UnmanagedType.Struct)] out object Status, [MarshalAs(UnmanagedType.Struct)] out object RefEntity, [MarshalAs(UnmanagedType.Struct)] out object FeatCom, [MarshalAs(UnmanagedType.Struct)] out object ConfigOptions, [MarshalAs(UnmanagedType.Struct)] out object ConfigNames);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(322)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateStructureSystemMemberData([In] int MemberType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(323)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature CreateStructureSystem([In][MarshalAs(UnmanagedType.Struct)] object PrimaryMembersData, [In][MarshalAs(UnmanagedType.Struct)] object SecondaryMembersData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(324)]
+    bool UpgradeLegacyCustomProperties([In] bool UpgradeAllAssemComps);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(325)]
+    int ShowUserNotification([In][MarshalAs(UnmanagedType.IDispatch)] object Definition, [In][MarshalAs(UnmanagedType.IDispatch)] object Handler);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(326)]
+    int ShowMessageBar([In][MarshalAs(UnmanagedType.IDispatch)] object Definition, [In][MarshalAs(UnmanagedType.IDispatch)] object Handler);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(327)]
+    void CloseUserNotification([In][MarshalAs(UnmanagedType.IDispatch)] object Handler);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(328)]
+    void CloseMessageBar([In][MarshalAs(UnmanagedType.IDispatch)] object Handler);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(329)]
+    int ReloadOrReplace([In] bool ReadOnly, [In][MarshalAs(UnmanagedType.BStr)] string ReplaceFileName, [In] bool DiscardChanges, [In] bool ForceReload);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(330)]
+    void Make3DExperienceCompatible([In] bool IncludeComponents, [In][Out] ref bool Result);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(331)]
+    bool HasLegacyCThreads();
+
+    [DispId(332)]
+    bool HasLegacyCustomProperties
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(332)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(333)]
+    bool SaveViewToSolidworks([In][MarshalAs(UnmanagedType.BStr)] string ViewName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(334)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetActiveAnnotationView();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(335)]
+    double GetSphericalBoxDiameter();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(336)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertBomTable4([In][MarshalAs(UnmanagedType.BStr)] string TemplateName, [In] int X, [In] int Y, [In] int BomType, [In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName, [In] bool Hidden, [In] int IndentedNumberingType, [In] bool DetailedCutList, [In] bool DissolvePartLevelRows);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(337)]
+    bool GetCSYSDistances(out double TotDistance, out double XDistance, out double YDistance, out double ZDistance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(338)]
+    bool GetCSYSXYZAngularRotation(out double XAngle, out double YAngle, out double ZAngle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(339)]
+    bool GetCSYSEulersAngularRotation(out double phiAngle, out double thetaAngle, out double psiAngle);
+}
+#if false // Decompilation log
+'166' items in cache
+------------------
+Resolve: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+Found single assembly: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\mscorlib.dll'
+------------------
+Resolve: 'Microsoft.Win32.Registry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'Microsoft.Win32.Registry, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\Microsoft.Win32.Registry.dll'
+------------------
+Resolve: 'System.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.dll'
+------------------
+Resolve: 'System.Security.Principal.Windows, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Principal.Windows, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Principal.Windows.dll'
+------------------
+Resolve: 'System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+Could not find by name: 'System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+------------------
+Resolve: 'System.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.dll'
+------------------
+Resolve: 'System.Collections.NonGeneric, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections.NonGeneric, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.NonGeneric.dll'
+------------------
+Resolve: 'System.Collections.Concurrent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections.Concurrent, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.Concurrent.dll'
+------------------
+Resolve: 'System.ObjectModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.ObjectModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.ObjectModel.dll'
+------------------
+Resolve: 'System.Console, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Console, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Console.dll'
+------------------
+Resolve: 'System.Runtime.InteropServices, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.InteropServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.InteropServices.dll'
+------------------
+Resolve: 'System.Diagnostics.Contracts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.Contracts, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.Contracts.dll'
+------------------
+Resolve: 'System.Diagnostics.StackTrace, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.StackTrace, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.StackTrace.dll'
+------------------
+Resolve: 'System.Diagnostics.Tracing, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.Tracing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.Tracing.dll'
+------------------
+Resolve: 'System.IO.FileSystem.DriveInfo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.FileSystem.DriveInfo, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.FileSystem.DriveInfo.dll'
+------------------
+Resolve: 'System.IO.IsolatedStorage, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.IsolatedStorage, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.IsolatedStorage.dll'
+------------------
+Resolve: 'System.ComponentModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.ComponentModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.ComponentModel.dll'
+------------------
+Resolve: 'System.Threading.Thread, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Thread, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Thread.dll'
+------------------
+Resolve: 'System.Reflection.Emit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.dll'
+------------------
+Resolve: 'System.Reflection.Emit.ILGeneration, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit.ILGeneration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.ILGeneration.dll'
+------------------
+Resolve: 'System.Reflection.Emit.Lightweight, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit.Lightweight, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.Lightweight.dll'
+------------------
+Resolve: 'System.Reflection.Primitives, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Primitives.dll'
+------------------
+Resolve: 'System.Resources.Writer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Resources.Writer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Resources.Writer.dll'
+------------------
+Resolve: 'System.Runtime.CompilerServices.VisualC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.CompilerServices.VisualC, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.CompilerServices.VisualC.dll'
+------------------
+Resolve: 'System.Runtime.Serialization.Formatters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.Serialization.Formatters, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.Serialization.Formatters.dll'
+------------------
+Resolve: 'System.Security.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.AccessControl.dll'
+------------------
+Resolve: 'System.IO.FileSystem.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.FileSystem.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.FileSystem.AccessControl.dll'
+------------------
+Resolve: 'System.Threading.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Could not find by name: 'System.Threading.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+------------------
+Resolve: 'System.Security.Claims, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Claims.dll'
+------------------
+Resolve: 'System.Security.Cryptography, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Cryptography, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Cryptography.dll'
+------------------
+Resolve: 'System.Text.Encoding.Extensions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Text.Encoding.Extensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Text.Encoding.Extensions.dll'
+------------------
+Resolve: 'System.Threading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.dll'
+------------------
+Resolve: 'System.Threading.Overlapped, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Overlapped, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Overlapped.dll'
+------------------
+Resolve: 'System.Threading.ThreadPool, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.ThreadPool, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.ThreadPool.dll'
+------------------
+Resolve: 'System.Threading.Tasks.Parallel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Tasks.Parallel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Tasks.Parallel.dll'
+------------------
+Resolve: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.dll'
+#endif

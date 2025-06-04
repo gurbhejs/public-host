@@ -1,0 +1,1730 @@
+#region Assembly SolidWorks.Interop.sldworks, Version=32.1.0.123, Culture=neutral, PublicKeyToken=7c4797c3e4eeac03
+// C:\Users\singh\.nuget\packages\solidworks.interop.sldworks\32.1.0\lib\netstandard2.0\SolidWorks.Interop.sldworks.dll
+// Decompiled with ICSharpCode.Decompiler 8.1.1.7464
+#endregion
+
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+
+namespace SolidWorks.Interop.sldworks;
+
+[ComImport]
+[Guid("6B39655E-381B-4BD0-89F5-640D48593F15")]
+[TypeLibType(TypeLibTypeFlags.FHidden | TypeLibTypeFlags.FDual | TypeLibTypeFlags.FDispatchable)]
+public interface IFeatureManager
+{
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(1)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    CustomBendAllowance CreateCustomBendAllowance();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(2)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalBaseFlange([In] double Thickness, [In] bool ThickenDir, [In] double Radius, [In] double ExtrudeDist1, [In] double ExtrudeDist2, [In] bool FlipExtruDir, [In] int EndCondition1, [In] int EndCondition2, [In] int DirToUse, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA, [In] bool UseDefaultRelief, [In] int ReliefType, [In] double ReliefWidth, [In] double ReliefDepth, [In] double ReliefRatio, [In] bool UseReliefRatio);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(3)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDeleteBody();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(4)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureExtrusion([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(5)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureExtrusionThin([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool Merge, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(6)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCut([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool NormalCut, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(7)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCutThin([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(8)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureRevolve([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] int Options, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSel);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(9)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureRevolveCut([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] int Options, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(10)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureRevolveThin([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] double Thickness1, [In] double Thickness2, [In] int ReverseThinDir, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(11)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureRevolveThinCut([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] double Thickness1, [In] double Thickness2, [In] int ReverseThinDir, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(12)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureBossThicken([In] double Thickness, [In] int Direction, [In] int FaceIndex, [In] bool FillVolume, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(13)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCutThicken([In] double Thickness, [In] int Direction, [In] int FaceIndex, [In] bool FillVolume, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(14)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertProtrusionSwept([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(15)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutSwept([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(16)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertProtrusionBlend([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType, [In] double StartTangentLength, [In] double EndTangentLength, [In] bool StartTangentDir, [In] bool EndTangentDir, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(17)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutBlend([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(18)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature HoleWizard([In] int GenericHoleType, [In] int StandardIndex, [In] int FastenerTypeIndex, [In][MarshalAs(UnmanagedType.BStr)] string SSize, [In] short EndType, [In] double Diameter, [In] double Depth, [In] double Value1, [In] double Value2, [In] double Value3, [In] double Value4, [In] double Value5, [In] double Value6, [In] double Value7, [In] double Value8, [In] double Value9, [In] double Value10, [In] double Value11, [In] double Value12);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(19)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMacroFeature([In][MarshalAs(UnmanagedType.BStr)] string BaseName, [In][MarshalAs(UnmanagedType.BStr)] string ProgId, [In][MarshalAs(UnmanagedType.Struct)] object MacroMethods, [In][MarshalAs(UnmanagedType.Struct)] object ParamNames, [In][MarshalAs(UnmanagedType.Struct)] object ParamTypes, [In][MarshalAs(UnmanagedType.Struct)] object ParamValues, [In][MarshalAs(UnmanagedType.Interface)] Body2 EditBody, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(20)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertMacroFeature([In][MarshalAs(UnmanagedType.BStr)] string BaseName, [In][MarshalAs(UnmanagedType.BStr)] string ProgId, [In][MarshalAs(UnmanagedType.BStr)] ref string MacroMethods, [In] int ParamCount, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamNames, [In] ref int ParamTypes, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamValues, [In][MarshalAs(UnmanagedType.Interface)] Body2 EditBody, [In] int Options);
+
+    [DispId(21)]
+    bool EnableFeatureTree
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(21)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(21)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(22)]
+    void UpdateFeatureTree();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(23)]
+    bool InsertFeatureTreeFolder();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(24)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalCornerTrim([In] int InternalCornerFlag, [In] int BreakType, [In] double BreakDist, [In] int ReliefType, [In] double Param);
+
+    [DispId(25)]
+    bool ShowFeatureName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(25)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(25)]
+        [param: In]
+        set;
+    }
+
+    [DispId(26)]
+    bool ShowFeatureDescription
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(26)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(26)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(27)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFillSurface([In] int Resolution);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(28)]
+    bool EditRollback([In] int Location, [In][MarshalAs(UnmanagedType.BStr)] string Feature);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(29)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalLoftedBend([In] int ThickDirType, [In] double Thickness);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(30)]
+    void MakeStyledCurves([In] double Tol, [In] int Mode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(31)]
+    void HideBodies();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(32)]
+    void ShowBodies();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(33)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMirrorFeature([In] bool BMirrorBody, [In] bool BGeometryPattern, [In] bool BMerge, [In] bool BKnit);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(34)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoveCopyBody([In] double TransX, [In] double TransY, [In] double TransZ, [In] double TransDist, [In] double RotPointX, [In] double RotPointY, [In] double RotPointZ, [In] double RotAngleX, [In] double RotAngleY, [In] double RotAngleZ, [In] bool BCopy, [In] int NumCopies);
+
+    [DispId(35)]
+    ModelDoc2 Document
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(35)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(36)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCombineFeature([In] int OperationType, [In][MarshalAs(UnmanagedType.Interface)] Body2 MainBody, [In][MarshalAs(UnmanagedType.Struct)] object ToolVar);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(37)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertCombineFeature([In] int OperationType, [In][MarshalAs(UnmanagedType.Interface)] Body2 MainBody, [In] int ToolsCount, [In][MarshalAs(UnmanagedType.Interface)] ref Body2 ToolsArr);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(38)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDwgOrDxfFile([In][MarshalAs(UnmanagedType.BStr)] string FileName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(39)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLinearPattern([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(40)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCircularPattern([In] int Num, [In] double Spacing, [In] bool FlipDir, [In][MarshalAs(UnmanagedType.BStr)] string DName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(41)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertTableDrivenPattern([In][MarshalAs(UnmanagedType.BStr)] string FileName, [In][MarshalAs(UnmanagedType.Struct)] object PointVar, [In] bool UseCentrod, [In] bool GeomPatt);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(42)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertTableDrivenPattern([In][MarshalAs(UnmanagedType.BStr)] string FileName, [In] int Count, [In] ref double PointArr, [In] bool UseCentrod, [In] bool GeomPatt);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(43)]
+    [return: MarshalAs(UnmanagedType.BStr)]
+    string InsertCosmeticThread([In] short Type, [In] double Depth, [In] double Length, [In][MarshalAs(UnmanagedType.BStr)] string Note);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(44)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertScale([In] short Type, [In] bool Uniform, [In] double Xscale, [In] double YScale, [In] double ZScale);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(45)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFeatureTreeFolder2([In] int Type);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(46)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoveCopyBody2([In] double TransX, [In] double TransY, [In] double TransZ, [In] double TransDist, [In] double RotPointX, [In] double RotPointY, [In] double RotPointZ, [In] double RotAngleX, [In] double RotAngleY, [In] double RotAngleZ, [In] bool BCopy, [In] int NumCopies);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(47)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureSketchDrivenPattern([In] bool UseCentroid, [In] bool BGeomPatt);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(48)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDerivedPattern();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(49)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertGussetFeature([In] double Depth, [In] short DirType, [In] short LocType, [In] bool BIsProfile, [In] double ProfileD1, [In] double ProfileD2, [In] double ProfileD3, [In] double ProfileAngle, [In] double ProfileD4, [In] bool BOffset, [In] double DProfileOffset, [In] int CrvIndex, [In] bool BReverseDir, [In] bool BReverseFace, [In] bool BUseLenDim);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(50)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSubWeldFolder();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(51)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoldPartingLine([In] bool BFlipDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(52)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoldShutOffSurface();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(53)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWeldmentFeature();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(54)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMultiFaceDraft([In] double Angle, [In] bool FlipDir, [In] bool EdgeDraft, [In] int PropType, [In] bool IsStepDraft, [In] bool IsBodyDraft);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(55)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertRuledSurfaceFromEdge([In] int Type, [In] double Length, [In] bool FlipPullDir, [In] bool FlipDir, [In] bool TrimAndSew, [In] double Angle, [In] bool CoordInput, [In] double X, [In] double Y, [In] double Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(56)]
+    bool MakeStyledCurves2([In] double Tolerance, [In] int Mode);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(57)]
+    bool InsertSaveOutBodies();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(58)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoldCoreCavitySolids([In] double Dist1, [In] double Dist2, [In] bool Setback, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(59)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMacroFeature2([In][MarshalAs(UnmanagedType.BStr)] string BaseName, [In][MarshalAs(UnmanagedType.BStr)] string ProgId, [In][MarshalAs(UnmanagedType.Struct)] object MacroMethods, [In][MarshalAs(UnmanagedType.Struct)] object ParamNames, [In][MarshalAs(UnmanagedType.Struct)] object ParamTypes, [In][MarshalAs(UnmanagedType.Struct)] object ParamValues, [In][MarshalAs(UnmanagedType.Struct)] object DimTypes, [In][MarshalAs(UnmanagedType.Struct)] object DimValues, [In][MarshalAs(UnmanagedType.Interface)] Body2 EditBody, [In][MarshalAs(UnmanagedType.Struct)] object IconFiles, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(60)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertMacroFeature2([In][MarshalAs(UnmanagedType.BStr)] string BaseName, [In][MarshalAs(UnmanagedType.BStr)] string ProgId, [In][MarshalAs(UnmanagedType.BStr)] ref string MacroMethods, [In] int ParamCount, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamNames, [In] ref int ParamTypes, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamValues, [In] int DimCount, [In] ref int DimTypes, [In] ref double DimCountValues, [In][MarshalAs(UnmanagedType.Interface)] Body2 EditBody, [In] int IconCount, [In][MarshalAs(UnmanagedType.BStr)] ref string IconFiles, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(61)]
+    void MoldUndercutDetect([In] int ColUndercut, [In] int ColBase, [In] bool BCoordInput, [In] double Dx, [In] double Dy, [In] double Dz);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(62)]
+    bool PreTrimSurface([In] bool BMutualTrimIn, [In] bool BSplitSystemIn, [In] bool BSplitLinearIn, [In] bool BRemovePickedIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(63)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature PostTrimSurface([In] bool BSewSurfaceIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(64)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertStructuralWeldment([In][MarshalAs(UnmanagedType.BStr)] string Path, [In] int EndCond, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(65)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWeldmentTrimFeature([In] int EndCond);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(66)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWrapFeature([In] int Type, [In] double Thickness, [In] bool ReverseDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(67)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFilletBeadFeature([In] short Type1, [In] double Size1, [In] double Length1, [In] double Pitch, [In] short Type2, [In] double Size2, [In] double Length2, [In] int Flag, [In] int EdgeNum1, [In][MarshalAs(UnmanagedType.Struct)] object DeSelEdge1, [In] int EdgeNum2, [In][MarshalAs(UnmanagedType.Struct)] object DeSelEdge2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(68)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertEndCapFeature([In] double Depth, [In] bool BIsGivenOffset, [In] bool BIsChamfer, [In] double OffsetValue, [In] double WallThicknessRatio, [In] double ChamferValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(69)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object InsertReferencePoint([In] int NRefPointType, [In] int NRefPointAlongCurveType, [In] double DDistance_or_Percent, [In] int NumberOfRefPoints);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(70)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertReferencePoint([In] int NRefPointType, [In] int NRefPointAlongCurveType, [In] double DDistance_or_Percent, [In] int NumberOfRefPoints);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(71)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertProtrusionSwept2([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] short PathAlign, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(72)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutSwept2([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] short PathAlign, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(73)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSweepSurface([In] bool Propagate, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool ForceNonRational, [In] short StartMatchingType, [In] short EndMatchingType, [In] short PathAlign);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(74)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature SimpleHole([In] double Dia, [In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(75)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoldPartingSurface([In] int Radiate, [In] bool ReverseAlignment, [In] bool ReverseOffset, [In] double OffsetDistance, [In] double Angle, [In] int Smooth, [In] double SmoothDistance, [In] bool Knit);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(76)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertRuledSurfaceFromEdge2([In] int Type, [In] double Length, [In] bool FlipPullDir, [In] bool FlipDir, [In] bool TrimAndSew, [In] double Angle, [In] bool CoordInput, [In] double X, [In] double Y, [In] double Z, [In] bool BConnectSurface);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(77)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWeldmentCutList();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(78)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertUntrimSurface([In] int FaceUntrimType, [In] int EdgeUntrimType, [In] double Distance, [In] bool BMerge);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(79)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCosmeticThread2([In] short Type, [In] double Depth, [In] double Length, [In][MarshalAs(UnmanagedType.BStr)] string Note);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(80)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertStructuralWeldment2([In][MarshalAs(UnmanagedType.BStr)] string Path, [In] int EndCond, [In] double Angle, [In] bool Merge);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(81)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalMiterFlange([In] bool UseDefaultRadius, [In] double GlobalRadius, [In] double RipGap, [In] bool UseDefaultRelief, [In] bool UseReliefRatio, [In] double ReliefRatio, [In] double ReliefWidth, [In] double ReliefDepth, [In] int ReliefType, [In] bool TrimSideBends, [In] int FlangePos, [In] double OffsetDist1, [In] double OffsetDist2, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(82)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSubFolder();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(83)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFeatureChamfer([In] int Options, [In] int ChamferType, [In] double Width, [In] double Angle, [In] double OtherDist, [In] double VertexChamDist1, [In] double VertexChamDist2, [In] double VertexChamDist3);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(84)]
+    bool MoveToFolder([In][MarshalAs(UnmanagedType.BStr)] string MoveToFeat, [In][MarshalAs(UnmanagedType.BStr)] string MoveFromFeat, [In] bool IsFolder);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(85)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMateReference([In][MarshalAs(UnmanagedType.BStr)] string BstrMateReferenceName, [In][MarshalAs(UnmanagedType.Interface)] Entity PrimaryReferenceEntity, [In] int PrimaryReferenceType, [In] int PrimaryReferenceAlignment, [In][MarshalAs(UnmanagedType.Interface)] Entity SecondaryReferenceEntity, [In] int SecondaryReferenceType, [In] int SecondaryReferenceAlignment, [In][MarshalAs(UnmanagedType.Interface)] Entity TertiaryReferenceEntity, [In] int TertiaryReferenceType, [In] int TertiaryReferenceAlignment);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(86)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FeatureFillet([In] int Options, [In] double R1, [In] int Ftyp, [In] int OverflowType, [In][MarshalAs(UnmanagedType.Struct)] object Radii, [In][MarshalAs(UnmanagedType.Struct)] object SetBackDistances, [In][MarshalAs(UnmanagedType.Struct)] object PointRadiusArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(87)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IFeatureFillet([In] int Options, [In] double R1, [In] int Ftyp, [In] int OverflowType, [In] int NRadii, [In] ref double Radii, [In] int SetbackDistCount, [In] ref double SetBackDistances, [In] int PointCount, [In] ref double PointRadiusArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(88)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertProtrusionSwept3([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] short PathAlign, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(89)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutSwept3([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] short PathAlign, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(90)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSweepSurface2([In] bool Propagate, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] short StartMatchingType, [In] short EndMatchingType, [In] short PathAlign, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(91)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalHem([In] int Type, [In] int Position, [In] bool Reverse, [In] double DLength, [In] double DGap, [In] double DAngle, [In] double DRad, [In] double DMiterGap, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(92)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalEdgeFlange([In][MarshalAs(UnmanagedType.Interface)] Edge FlangeEdge, [In][MarshalAs(UnmanagedType.Interface)] Feature SketchFeat, [In] int BooleanOptions, [In] double DAngle, [In] double DRadius, [In] int BendPosition, [In] double DOffsetDist, [In] int ReliefType, [In] double DReliefRatio, [In] double DReliefWidth, [In] double DReliefDepth, [In] int FlangeSharpType, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(93)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetal3dBend([In] double Angle, [In] bool BUseDefaultRadius, [In] double Radius, [In] bool FlipDir, [In] short BendPos, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(94)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertEdgeMerge([In] double Angular_tolerance, [In] double Edge_length_tolerance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(95)]
+    void MoldUndercutDetect2([In] int ColUndercut1, [In] int ColUndercut2, [In] int ColOccluded, [In] int ColStraddle, [In] int ColBase, [In] bool BCoordInput, [In] double Dx, [In] double Dy, [In] double Dz);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(96)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertIndent([In] double Thickness, [In] double Clearance, [In] bool Exclude, [In] bool ClrDir, [In] bool Cut, [In] bool CutDir);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(97)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLinearPattern2([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2, [In] bool GeometryPattern);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(98)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCircularPattern2([In] int Num, [In] double Spacing, [In] bool FlipDir, [In][MarshalAs(UnmanagedType.BStr)] string DName, [In] bool GeometryPattern);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(99)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSplitLineIntersect([In] int CompleteOption);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(100)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFlexFeature([In] double RotX, [In] double RotY, [In] double RotZ, [In] double TanX, [In] double TanY, [In] double TanZ, [In] double RadX, [In] double RadY, [In] double RadZ, [In] double Angle, [In] double PivotX, [In] double PivotY, [In] double PivotZ, [In] int Type, [In] double LeftTrim, [In] double RightTrim, [In] bool HardEdges);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(101)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureExtrusion2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] int T0, [In] double StartOffset, [In] bool FlipStartOffset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(102)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoveFace([In] int MoveType, [In] bool ReverseDir, [In] double Angle, [In] double Distance);
+
+    [DispId(103)]
+    string FeatureName
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(103)]
+        [return: MarshalAs(UnmanagedType.BStr)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(104)]
+    bool IsNameUsed([In] int Type, [In][MarshalAs(UnmanagedType.BStr)] string Name);
+
+    [DispId(105)]
+    bool EnableFeatureTreeWindow
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(105)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(105)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(106)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature HoleWizard2([In] int GenericHoleType, [In] int StandardIndex, [In] int FastenerTypeIndex, [In][MarshalAs(UnmanagedType.BStr)] string SSize, [In] short EndType, [In] double Diameter, [In] double Depth, [In] double Value1, [In] double Value2, [In] double Value3, [In] double Value4, [In] double Value5, [In] double Value6, [In] double Value7, [In] double Value8, [In] double Value9, [In] double Value10, [In] double Value11, [In] double Value12, [In][MarshalAs(UnmanagedType.BStr)] string ThreadClass, [In] bool RevDir, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(107)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateDefinition([In] int Type);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(108)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature CreateFeature([In][MarshalAs(UnmanagedType.IDispatch)] object FeatureData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(109)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature CreateFormTool();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(110)]
+    bool InsertVariablePitchHelix([In] bool Reversed, [In] bool Clockwise, [In] int Helixdef, [In] double Startangle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(111)]
+    bool AddVariablePitchHelixSegment([In] double Height, [In] double Diameter, [In] double Pitch);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(112)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature EndVariablePitchHelix();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(113)]
+    int GetFeatureCount([In] bool ToplevelOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(114)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetFeatures([In] bool ToplevelOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(115)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IGetFeatures([In] bool ToplevelOnly, [In] int Count);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(116)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureExtrusionThin2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool Merge, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] int T0, [In] double StartOffset, [In] bool FlipStartOffset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(117)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Note InsertSecurityNote([In][MarshalAs(UnmanagedType.BStr)] string Text, [In][MarshalAs(UnmanagedType.Interface)] Feature FeatureOwner);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(118)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object PreSplitBody();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(119)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature PostSplitBody([In][MarshalAs(UnmanagedType.Struct)] object BodiesToMark, [In] bool ConsumeCut, [In][MarshalAs(UnmanagedType.Struct)] object Origins, [In][MarshalAs(UnmanagedType.Struct)] object SavePaths);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(120)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMacroFeature3([In][MarshalAs(UnmanagedType.BStr)] string BaseName, [In][MarshalAs(UnmanagedType.BStr)] string ProgId, [In][MarshalAs(UnmanagedType.Struct)] object MacroMethods, [In][MarshalAs(UnmanagedType.Struct)] object ParamNames, [In][MarshalAs(UnmanagedType.Struct)] object ParamTypes, [In][MarshalAs(UnmanagedType.Struct)] object ParamValues, [In][MarshalAs(UnmanagedType.Struct)] object DimTypes, [In][MarshalAs(UnmanagedType.Struct)] object DimValues, [In][MarshalAs(UnmanagedType.Struct)] object EditBodies, [In][MarshalAs(UnmanagedType.Struct)] object IconFiles, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(121)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertMacroFeature3([In][MarshalAs(UnmanagedType.BStr)] string BaseName, [In][MarshalAs(UnmanagedType.BStr)] string ProgId, [In][MarshalAs(UnmanagedType.BStr)] ref string MacroMethods, [In] int ParamCount, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamNames, [In] ref int ParamTypes, [In][MarshalAs(UnmanagedType.BStr)] ref string ParamValues, [In] int DimCount, [In] ref int DimTypes, [In] ref double DimCountValues, [In] int BodyCount, [In][MarshalAs(UnmanagedType.Interface)] ref Body2 EditBodies, [In] int IconCount, [In][MarshalAs(UnmanagedType.BStr)] ref string IconFiles, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(122)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertNetBlend([In] short Type, [In] short NCurvesDir1, [In] short NCurvesDir2, [In] bool HasCenterline, [In] double TessTolFactor, [In] bool WantsSolid, [In] bool MergeBody, [In] bool FeatureScope, [In] bool AutoSelect, [In] bool Thin, [In] double Thickness1, [In] double Thickness2, [In] bool ReverseThickness, [In] short ThinSolidType, [In] bool UseSharedThickness, [In] bool CapEnds, [In] double EndThickness, [In] bool AutoFillet, [In] double FilletRadius, [In] bool ForceNonRational);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(123)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature SetNetBlendCurveData([In] short Direction, [In] short CurveIndex, [In] short TangentType, [In] double SignedDraftAngle, [In] double SignedTangentLength, [In] bool TangentLengthApplyAll);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(124)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature SetNetBlendDirectionData([In] short Direction, [In] short InfluenceType, [In] short TrimCurves, [In] bool BlendClosed, [In] bool SplitSurfaces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(125)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature SetNetBlendCenterlineData([In] bool CombineWithDir2, [In] short TwistType, [In] short PathAlignmentType, [In] short TwistAngleType, [In] double TwistAngle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(126)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature ConvertLoftOrSweepToNetBlend();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(127)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalEdgeFlange2([In][MarshalAs(UnmanagedType.Struct)] object FlangeEdges, [In][MarshalAs(UnmanagedType.Struct)] object SketchFeats, [In] int BooleanOptions, [In] double FlangeAngle, [In] double FlangeRadius, [In] int BendPosition, [In] double FlangeOffsetDist, [In] int ReliefType, [In] double FlangeReliefRatio, [In] double FlangeReliefWidth, [In] double FlangeReliefDepth, [In] int FlangeSharpType, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance CustomBendAllowance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(128)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertSheetMetalEdgeFlange2([In] int EdgeCount, [In][MarshalAs(UnmanagedType.Interface)] ref Edge FlangeEdges, [In] int SketchFeatCount, [In][MarshalAs(UnmanagedType.Interface)] ref Feature SketchFeat, [In] int BooleanOptions, [In] double FlangeAngle, [In] double FlangeRadius, [In] int BendPosition, [In] double FlangeOffsetDist, [In] int ReliefType, [In] double FlangeReliefRatio, [In] double FlangeReliefWidth, [In] double FlangeReliefDepth, [In] int FlangeSharpType, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance CustomBendAllowance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(129)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFillSurface2([In] int Resolutions, [In] int Options, [In][MarshalAs(UnmanagedType.Struct)] object VPatchBoundaries, [In][MarshalAs(UnmanagedType.Struct)] object VCurvatureControlType, [In][MarshalAs(UnmanagedType.Struct)] object VFaces, [In][MarshalAs(UnmanagedType.Struct)] object VConstraintCurves);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(130)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFreeform([In] short Continuity0, [In] short Continuity1, [In] short Continuity2, [In] short Continuity3, [In] bool Symmetric0, [In] bool Symmetric1);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(131)]
+    void SetFreeformCurveData([In] short Direction, [In] double CurveParameter, [In] double Tangent0X, [In] double Tangent0Y, [In] double Tangent0Z, [In] double Tangent1X, [In] double Tangent1Y, [In] double Tangent1Z);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(132)]
+    void SetFreeformPointData([In] short Direction, [In] double CurveParameter, [In] double ParameterOnCurve, [In] double XOffset, [In] double YOffset, [In] double ZOffset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(133)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature DraftXpertChange([In] double Angle, [In] bool FlipDir, [In] bool EdgeDraft, [In] int PropType, [In] bool IsStepDraft, [In] bool IsBodyDraft);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(134)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature DraftXpertRemove();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(135)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FilletXpertChange([In] int Options, [In] double R1, [In] int Ftyp, [In] int OverflowType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(136)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FilletXpertRemove();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(137)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertRevolvedRefSurface([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType);
+
+    [DispId(138)]
+    bool ShowComponentNames
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(138)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(138)]
+        [param: In]
+        set;
+    }
+
+    [DispId(139)]
+    bool ShowComponentDescriptions
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(139)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(139)]
+        [param: In]
+        set;
+    }
+
+    [DispId(140)]
+    bool ShowComponentConfigurationNames
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(140)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(140)]
+        [param: In]
+        set;
+    }
+
+    [DispId(141)]
+    bool ShowComponentConfigurationDescriptions
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(141)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(141)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(142)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetPreTrimmedBodies([In][MarshalAs(UnmanagedType.Interface)] Body2 TargetSurface);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(143)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FilletXpertMakeCorner([In] int CornerType);
+
+    [DispId(144)]
+    bool MoveSizeFeatures
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(144)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(144)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(145)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMirrorFeature2([In] bool BMirrorBody, [In] bool BGeometryPattern, [In] bool BMerge, [In] bool BKnit, [In] int ScopeOptions);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(146)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFilletBeadFeature2([In] short Type1, [In] double Size1, [In] double Length1, [In] short PenetrationType1, [In] double PenetrationValue1, [In] double Pitch, [In] short Type2, [In] double Size2, [In] double Length2, [In] short PenetrationType2, [In] double PenetrationValue2, [In] int Flag, [In] int EdgeNum1, [In][MarshalAs(UnmanagedType.Struct)] object DeSelEdge1, [In] int EdgeNum2, [In][MarshalAs(UnmanagedType.Struct)] object DeSelEdge2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(147)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TreeControlItem GetFeatureTreeRootItem();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(148)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature SimpleFeatureBossExtrude([In][MarshalAs(UnmanagedType.BStr)] string SketchName, [In] double Depth, [In] bool Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(149)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertMidSurface([In][MarshalAs(UnmanagedType.Interface)] Body2 PBodyIn, [In][MarshalAs(UnmanagedType.Interface)] ModelDoc2 PPartDocIn, [In] double Placement, [In] bool KnitFlag);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(150)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object CreateSaveBodyFeature([In][MarshalAs(UnmanagedType.Struct)] object Bodies, [In][MarshalAs(UnmanagedType.Struct)] object FilePaths, [In][MarshalAs(UnmanagedType.BStr)] string AssemName, [In] bool ConsumeBody, [In] bool CopyCustomProperty);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(151)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature HoleWizard3([In] int GenericHoleType, [In] int StandardIndex, [In] int FastenerTypeIndex, [In][MarshalAs(UnmanagedType.BStr)] string SSize, [In] short EndType, [In] double Diameter, [In] double Depth, [In] double Value1, [In] double Value2, [In] double Value3, [In] double Value4, [In] double Value5, [In] double Value6, [In] double Value7, [In] double Value8, [In] double Value9, [In] double Value10, [In] double Value11, [In] double Value12, [In][MarshalAs(UnmanagedType.BStr)] string ThreadClass, [In] bool RevDir, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(152)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature SimpleHole2([In] double Dia, [In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(153)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCut2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool NormalCut, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(154)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureRevolveCut2([In] double Angle, [In] bool ReverseDir, [In] double Angle2, [In] int RevType, [In] int Options, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(155)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFreeform2([In] bool Nsided, [In] bool Symmetric0, [In] bool Symmetric1, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(156)]
+    void SetFreeformBoundaryContinuity([In] short BoundaryIndex, [In] short Continuity);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(157)]
+    bool EditReferencePoint([In] int NRefPointType, [In] int NRefPointAlongCurveType, [In] double DDistance_or_Percent, [In] int NumberOfRefPoints);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(158)]
+    bool EditDeleteFace([In] int Refill);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(159)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertLiveSectionPlane([In] short Type);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(160)]
+    bool MoveRotateLiveSectionPlane([In][MarshalAs(UnmanagedType.BStr)] string Feat, [In] short Type, [In] double XorDeltaX, [In] double YorDeltaY, [In] double ZorDeltaZ, [In] double Axisx, [In] double Axisy, [In] double Axisz, [In] double Angle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(161)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCrossBreak([In] double Angle, [In] double Radius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(162)]
+    void InsertRib([In] bool Is2Sided, [In] bool ReverseThicknessDir, [In] double Thickness, [In] int ReferenceEdgeIndex, [In] bool ReverseMaterialDir, [In] bool IsDrafted, [In] bool DraftOutward, [In] double DraftAngle, [In] bool IsNormToSketch, [In] bool IsDraftedFromWall);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(163)]
+    short GetPlasticsShellType();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(164)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCoordinateSystem([In] bool XFlippedIn, [In] bool YFlippedIn, [In] bool ZFlippedIn);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(165)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature CreateCoordinateSystem([In][MarshalAs(UnmanagedType.IDispatch)] object OriginPointEntity, [In][MarshalAs(UnmanagedType.Struct)] object XAxisEntities, [In][MarshalAs(UnmanagedType.Struct)] object YAxisEntities, [In][MarshalAs(UnmanagedType.Struct)] object ZAxisEntities);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(166)]
+    bool InsertConvertToSheetMetal([In] double Thickness, [In] bool ReverseThickDir, [In] bool FindBends, [In] double Radius, [In] double Gap, [In] int ReliefType, [In] double ReliefRatio);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(167)]
+    bool InsertConnectionPoint([In] int Type, [In] int SubType, [In] bool ReverseDirection, [In] double Diameter, [In] double StubLength, [In] double MinimumStraight, [In] double EndLengthAdjustment, [In] double ConductorSplitLength, [In][MarshalAs(UnmanagedType.BStr)] string SchematicPinID, [In] double CableWidth, [In] double CableThickness, [In] bool SwitchPin1Position, [In][MarshalAs(UnmanagedType.BStr)] string SpecificationFieldName, [In][MarshalAs(UnmanagedType.BStr)] string SpecificationValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(168)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCut3([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool NormalCut, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts, [In] int T0, [In] double StartOffset, [In] bool FlipStartOffset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(169)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCutThin2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] double Thk1, [In] double Thk2, [In] double EndThk, [In] int RevThinDir, [In] int CapEnds, [In] bool AddBends, [In] double BendRad, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] int T0, [In] double StartOffset, [In] bool FlipStartOffset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(170)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertStructuralWeldment3([In][MarshalAs(UnmanagedType.BStr)] string Path, [In] int EndCond, [In] double Angle, [In] bool Merge, [In][MarshalAs(UnmanagedType.Struct)] object Groups);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(171)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    StructuralMemberGroup CreateStructuralMemberGroup();
+
+    [DispId(172)]
+    FeatureStatistics FeatureStatistics
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(172)]
+        [return: MarshalAs(UnmanagedType.Interface)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(173)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMateReference2([In][MarshalAs(UnmanagedType.BStr)] string BstrMateReferenceName, [In][MarshalAs(UnmanagedType.Interface)] Entity PrimaryReferenceEntity, [In] int PrimaryReferenceType, [In] int PrimaryReferenceAlignment, [In] bool PrimaryReferenceAlignAxes, [In][MarshalAs(UnmanagedType.Interface)] Entity SecondaryReferenceEntity, [In] int SecondaryReferenceType, [In] int SecondaryReferenceAlignment, [In] bool SecondaryReferenceAlignAxes, [In][MarshalAs(UnmanagedType.Interface)] Entity TertiaryReferenceEntity, [In] int TertiaryReferenceType, [In] int TertiaryReferenceAlignment);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(174)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWeldmentCutList2([In][MarshalAs(UnmanagedType.Struct)] object Bodies);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(175)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertGussetFeature2([In] double Depth, [In] short DirType, [In] short LocType, [In] bool BIsProfile, [In] double ProfileD1, [In] double ProfileD2, [In] double ProfileD3, [In] double ProfileAngle, [In] double ProfileD4, [In] bool BOffset, [In] double DProfileOffset, [In] int CrvIndex, [In] bool BReverseDir, [In] bool BReverseFace, [In] bool BUseLenDim, [In][MarshalAs(UnmanagedType.Struct)] object Faces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(176)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertEndCapFeature2([In] double Depth, [In] bool BIsGivenOffset, [In] bool BIsChamfer, [In] double OffsetValue, [In] double WallThicknessRatio, [In] double ChamferValue, [In][MarshalAs(UnmanagedType.Struct)] object Faces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(177)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWeldmentTrimFeature2([In] int EndCond, [In] int Options, [In] double GapValue, [In][MarshalAs(UnmanagedType.Struct)] object BodiesToTrim, [In][MarshalAs(UnmanagedType.Struct)] object BodiesOrFaces);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(178)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFilletBeadFeature3([In] short Type1, [In] double Size1, [In] double Length1, [In] short PenetrationType1, [In] double PenetrationValue1, [In] double Pitch, [In] short Type2, [In] double Size2, [In] double Length2, [In] short PenetrationType2, [In] double PenetrationValue2, [In] int Flag, [In] int EdgeNum1, [In][MarshalAs(UnmanagedType.Struct)] object DeSelEdge1, [In] int EdgeNum2, [In][MarshalAs(UnmanagedType.Struct)] object DeSelEdge2, [In][MarshalAs(UnmanagedType.Struct)] object FaceSet1, [In][MarshalAs(UnmanagedType.Struct)] object FaceSet2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(179)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSubWeldFolder2([In][MarshalAs(UnmanagedType.Struct)] object BodyArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(180)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSewRefSurface([In] bool UseGapFilters, [In] bool TryToFormSolid, [In] bool MergeEntities, [In] double KnitTolerance, [In] double MaxValueForGapRange);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(181)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalBaseFlange2([In] double Thickness, [In] bool ThickenDir, [In] double Radius, [In] double ExtrudeDist1, [In] double ExtrudeDist2, [In] bool FlipExtruDir, [In] int EndCondition1, [In] int EndCondition2, [In] int DirToUse, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA, [In] bool UseDefaultRelief, [In] int ReliefType, [In] double ReliefWidth, [In] double ReliefDepth, [In] double ReliefRatio, [In] bool UseReliefRatio, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(182)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertRefPlane([In] int FirstConstraint, [In] double FirstConstraintAngleOrDistance, [In] int SecondConstraint, [In] double SecondConstraintAngleOrDistance, [In] int ThirdConstraint, [In] double ThirdConstraintAngleOrDistance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(183)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature HoleWizard4([In] int GenericHoleType, [In] int StandardIndex, [In] int FastenerTypeIndex, [In][MarshalAs(UnmanagedType.BStr)] string SSize, [In] short EndType, [In] double Diameter, [In] double Depth, [In] double Value1, [In] double Value2, [In] double Value3, [In] double Value4, [In] double Value5, [In] double Value6, [In] double Value7, [In] double Value8, [In] double Value9, [In] double Value10, [In] double Value11, [In] double Value12, [In][MarshalAs(UnmanagedType.BStr)] string ThreadClass, [In] bool RevDir, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(184)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoveFace2([In] int MoveType, [In] bool ReverseDir, [In] double Angle, [In] double Distance, [In][MarshalAs(UnmanagedType.Struct)] object TranslationParams, [In][MarshalAs(UnmanagedType.Struct)] object RotationParams);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(185)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IInsertMoveFace2([In] int MoveType, [In] bool ReverseDir, [In] double Angle, [In] double Distance, [In] ref double TranslationParams, [In] ref double RotationParams);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(186)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertProtrusionBlend2([In] bool Closed, [In] bool KeepTangency, [In] bool ForceNonRational, [In] double TessToleranceFactor, [In] short StartMatchingType, [In] short EndMatchingType, [In] double StartTangentLength, [In] double EndTangentLength, [In] bool StartTangentDir, [In] bool EndTangentDir, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] int GuideCurveInfluence);
+
+    [DispId(187)]
+    bool ViewDependencies
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(187)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(187)]
+        [param: In]
+        set;
+    }
+
+    [DispId(188)]
+    bool ViewFeatures
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(188)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(188)]
+        [param: In]
+        set;
+    }
+
+    [DispId(189)]
+    bool ShowHierarchyOnly
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(189)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(189)]
+        [param: In]
+        set;
+    }
+
+    [DispId(190)]
+    bool ShowFeatureDetails
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(190)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(190)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(191)]
+    bool InsertConvertToSheetMetal2([In] double Thickness, [In] bool ReverseThickDir, [In] bool FindBends, [In] double Radius, [In] double Gap, [In] int ReliefType, [In] double ReliefRatio, [In] int OverlapType, [In] double OverlapRatio, [In] bool KeepBody);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(192)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutSwept4([In] bool Propagate, [In] bool Alignment, [In] short TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] short StartMatchingType, [In] short EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] short ThinType, [In] short PathAlign, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(193)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertStructuralWeldment4([In][MarshalAs(UnmanagedType.BStr)] string Path, [In] int ConnectedSegmentsOption, [In] bool AllowProtrusion, [In][MarshalAs(UnmanagedType.Struct)] object Groups);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(194)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFeatureLock();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(195)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertGridFeature([In][MarshalAs(UnmanagedType.Struct)] object HeightDoubles);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(196)]
+    void FeatureExtruRefSurface([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool CapEnd1, [In] bool CapEnd2, [In] bool DeleteOriginalFace, [In] bool KnitResult);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(197)]
+    bool AddVariablePitchHelixFirstPitchAndDiameter([In] double FirstPitch, [In] double FirstDiameter);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(198)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureRevolve2([In] bool SingleDir, [In] bool IsSolid, [In] bool IsThin, [In] bool IsCut, [In] bool ReverseDir, [In] bool BothDirectionUpToSameEntity, [In] int Dir1Type, [In] int Dir2Type, [In] double Dir1Angle, [In] double Dir2Angle, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] double OffsetDistance1, [In] double OffsetDistance2, [In] int ThinType, [In] double ThinThickness1, [In] double ThinThickness2, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(199)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDwgOrDxfFile2([In][MarshalAs(UnmanagedType.BStr)] string FileName, [In][MarshalAs(UnmanagedType.IDispatch)] object DxfDwgImportData);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(200)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCircularPattern3([In] int Number, [In] double Spacing, [In] bool FlipDirection, [In][MarshalAs(UnmanagedType.BStr)] string DName, [In] bool GeometryPattern, [In] bool EqualSpacing);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(201)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalHem2([In] int Type, [In] int Position, [In] bool Reverse, [In] double DLength, [In] double DGap, [In] double DAngle, [In] double DRad, [In] double DMiterGap, [In][MarshalAs(UnmanagedType.Interface)] CustomBendAllowance PCBA, [In] bool UseDefaultRelief, [In] int ReliefType, [In] int ReliefTearTypes, [In] bool UseReliefRatio, [In] double ReliefRatio, [In] double ReliefWidth, [In] double ReliefDepth);
+
+    [DispId(202)]
+    bool ShowDisplayStateNames
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(202)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(202)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(203)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFormToolFeature([In][MarshalAs(UnmanagedType.BStr)] string Path, [In] bool Flip, [In] double RotAngle, [In][MarshalAs(UnmanagedType.BStr)] string Config, [In] bool OverrideDoc, [In] bool ShowPunch, [In] bool ShowProfile, [In] bool ShowCenter, [In] bool LinkToPart);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(204)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature GetFreezeLocation();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(205)]
+    int EditFreeze([In] int Location, [In][MarshalAs(UnmanagedType.BStr)] string FeatureName, [In] bool UpdateAllConfigs);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(206)]
+    void FeatureExtruRefSurface2([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool CapEnd1, [In] bool CapEnd2, [In] bool DeleteOriginalFace, [In] bool KnitResult);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(207)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    TreeControlItem GetFeatureTreeRootItem2([In] int WhichPane);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(208)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCosmeticWeldBead([In] double WeldSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(209)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature CreateFormTool2([In] double OriginX, [In] double OriginY);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(210)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLinearPattern3([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2, [In] bool GeometryPattern, [In] bool VaryInstance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(211)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCircularPattern4([In] int Number, [In] double Spacing, [In] bool FlipDirection, [In][MarshalAs(UnmanagedType.BStr)] string DName, [In] bool GeometryPattern, [In] bool EqualSpacing, [In] bool VaryInstance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(212)]
+    bool InsertVaryInstanceIncrement([In][MarshalAs(UnmanagedType.BStr)] string DName, [In] int PatternType, [In] int IncrementType, [In] int Direction, [In] double IncrementValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(213)]
+    bool InsertVaryInstanceOverride([In][MarshalAs(UnmanagedType.BStr)] string DName, [In] int PatternType, [In] int OverrideType, [In] int Direction, [In] int InstanceRowIndex, [In] int InstanceColumnIndex, [In] double OverrideValue);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(214)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCenterOfMass();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(215)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCenterOfMassReferencePoint();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(216)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutSurface([In] bool Flip, [In] int KeepPieceIndex, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In][MarshalAs(UnmanagedType.Struct)] object Bodies, out int Error);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(217)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetSheetMetalFolder();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(218)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetFlatPatternFolder();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(219)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureFillPattern([In] int PatternLayoutType, [In] int LayoutSpacingType, [In] double InstanceSpacing, [In] double StaggerAngle, [In] double Margins, [In] double LoopSpacing, [In] int NoOfInstances, [In] int PatternLayoutPolygonSides, [In] int FeaturesToPatternType, [In] int CreateSeedCutType, [In] double Diameter, [In] double Dimension, [In] double Rotation, [In] double Diagonal, [In] int CreateSeedCutPolygonSides, [In] double OuterRadius, [In] double InnerRadius, [In] bool FlipShapeDirection, [In] bool GeometryPattern);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(220)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureDimensionPattern([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool DiagonalOnly, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2, [In] bool VaryInstance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(221)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalLoftedBend2([In] int ThickDirType, [In] double Thickness, [In] bool BFormed, [In] double DRadius, [In] bool BReferToEndPoint, [In] int EFacetOption, [In] double DChordTol, [In] int INumBends, [In] double DSegLength, [In] double DSegAngle);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(222)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature HoleWizard5([In] int GenericHoleType, [In] int StandardIndex, [In] int FastenerTypeIndex, [In][MarshalAs(UnmanagedType.BStr)] string SSize, [In] short EndType, [In] double Diameter, [In] double Depth, [In] double Length, [In] double Value1, [In] double Value2, [In] double Value3, [In] double Value4, [In] double Value5, [In] double Value6, [In] double Value7, [In] double Value8, [In] double Value9, [In] double Value10, [In] double Value11, [In] double Value12, [In][MarshalAs(UnmanagedType.BStr)] string ThreadClass, [In] bool RevDir, [In] bool FeatureScope, [In] bool AutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(223)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalGussetFeature([In] bool BOffset, [In] double DOffset, [In] bool BFlipOffsetSide, [In] int ProfDimType, [In] double DIndentDepth, [In] double DLength, [In] bool BUseAngle, [In] double DHeight, [In] double DAngle, [In] bool BFlipSides, [In] double DWidth, [In] double DThickness, [In] bool BDraft, [In] double DDraftAngle, [In] bool BInnerCornerFillet, [In] double DInnerCornerFilletRadius, [In] bool BOuterCornerFillet, [In] double DOuterCornerFilletRadius, [In] int GussetType, [In] bool BEdgeFillet, [In] double DEdgeFilletRadius);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(224)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalGussetFeature2([In] bool BOffset, [In] double DOffset, [In] bool BFlipOffsetSide, [In] int ProfDimType, [In] double DIndentDepth, [In] double DLength, [In] bool BUseAngle, [In] double DHeight, [In] double DAngle, [In] bool BFlipSides, [In] double DWidth, [In] double DThickness, [In] bool BDraft, [In] double DDraftAngle, [In] bool BInnerCornerFillet, [In] double DInnerCornerFilletRadius, [In] bool BOuterCornerFillet, [In] double DOuterCornerFilletRadius, [In] int GussetType, [In] bool BEdgeFillet, [In] double DEdgeFilletRadius, [In][MarshalAs(UnmanagedType.Struct)] object ArrayOfFaces, [In][MarshalAs(UnmanagedType.Struct)] object ArrayRefLines, [In][MarshalAs(UnmanagedType.Struct)] object ArrayRefPoints);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(225)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureExtrusion3([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] int T0, [In] double StartOffset, [In] bool FlipStartOffset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(226)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FeatureFillet2([In] int Options, [In] double R1, [In] double Rho, [In] int Ftyp, [In] int OverflowType, [In] int ConicRhoType, [In][MarshalAs(UnmanagedType.Struct)] object Radii, [In][MarshalAs(UnmanagedType.Struct)] object RhoArr, [In][MarshalAs(UnmanagedType.Struct)] object SetBackDistances, [In][MarshalAs(UnmanagedType.Struct)] object PointRadiusArray, [In][MarshalAs(UnmanagedType.Struct)] object PointRhoArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(227)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature IFeatureFillet2([In] int Options, [In] double R1, [In] double Rho, [In] int Ftyp, [In] int OverflowType, [In] int ConicRhoType, [In] int NRadii, [In] ref double Radii, [In] ref double RhoArr, [In] int SetbackDistCount, [In] ref double SetBackDistances, [In] int PointCount, [In] ref double PointRadiusArray, [In] ref double PointRhoArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(228)]
+    bool AddCornerReliefType([In] int CornerIndex, [In] int ReliefType, [In] double Length1, [In] double Length2, [In] double Length3, [In] bool CenterOnBendLines, [In] bool RatioToThickness, [In] bool TangentToBend, [In] bool AddFilletedCorners, [In] bool NarrowCorner);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(229)]
+    int AddCornerReliefCorner();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(230)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FinishCornerRelief();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(231)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCosmeticThread3([In] int Standard, [In][MarshalAs(UnmanagedType.BStr)] string StandardType, [In][MarshalAs(UnmanagedType.BStr)] string Size, [In] double Diameter, [In] int EndType, [In] double Depth, [In][MarshalAs(UnmanagedType.BStr)] string Note);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(232)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object PreIntersect([In] bool CapPlanar);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(233)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature PostIntersect([In][MarshalAs(UnmanagedType.Struct)] object IntersectionsToExclude, [In] bool Merge, [In] bool Consume);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(234)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FeatureFillet3([In] int Options, [In] double R1, [In] double R2, [In] double Rho, [In] int Ftyp, [In] int OverflowType, [In] int ConicRhoType, [In][MarshalAs(UnmanagedType.Struct)] object Radii, [In][MarshalAs(UnmanagedType.Struct)] object Dist2Arr, [In][MarshalAs(UnmanagedType.Struct)] object RhoArr, [In][MarshalAs(UnmanagedType.Struct)] object SetBackDistances, [In][MarshalAs(UnmanagedType.Struct)] object PointRadiusArray, [In][MarshalAs(UnmanagedType.Struct)] object PointDist2Array, [In][MarshalAs(UnmanagedType.Struct)] object PointRhoArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(235)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureFolderLocation([In][MarshalAs(UnmanagedType.Interface)] Feature Feature);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(236)]
+    int EditFreeze2([In] int Location, [In][MarshalAs(UnmanagedType.BStr)] string FeatureName, [In] bool UpdateAllConfigs, [In] bool UnlockConfigs);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(237)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLocalCurveDrivenPattern([In] bool FlipDir1, [In] int Num1, [In] bool EqualSpacing1, [In] double Spacing1, [In] int ReferencePoint, [In] int CurveMethod, [In] int AlignMethod, [In] bool Direction2, [In] bool FlipDir2, [In] int Num2, [In] bool EqualSpacing2, [In] double Spacing2, [In] bool PatternSeedOnly);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(238)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLocalSketchDrivenPattern([In] int ReferencePoint);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(239)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object PreSplitBody2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(240)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertEndCapFeature3([In] double Depth, [In] bool BIsGivenOffset, [In] bool BIsChamfer, [In] double OffsetValue, [In] double WallThicknessRatio, [In] double ChamferValue, [In] bool BIsCornerTreatment, [In] double DepthOffset, [In] bool BIsReverse, [In] int BIsEndCapInward);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(241)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertGussetFeature3([In] double Depth, [In] short DirType, [In] short LocType, [In] bool BIsProfile, [In] double ProfileD1, [In] double ProfileD2, [In] double ProfileD3, [In] double ProfileAngle, [In] double ProfileD4, [In] bool BOffset, [In] double DProfileOffset, [In] int CrvIndex, [In] bool BReverseDir, [In] bool BReverseFace, [In] bool BUseLenDim, [In] double ProfileD5, [In] double ProfileD6, [In] double ProfileChamferAngle, [In] bool BUseLenDimForChamfer, [In] bool BNeedChamferInGusset);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(242)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDeleteBody2([In] bool KeepBodies);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(243)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLinearPattern4([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2, [In] bool GeometryPattern, [In] bool VaryInstance, [In] bool HasOffset1, [In] bool HasOffset2, [In] bool CtrlByNum1, [In] bool CtrlByNum2, [In] bool FromCentroid1, [In] bool FromCentroid2, [In] bool RevOffset1, [In] bool RevOffset2, [In] double Offset1, [In] double Offset2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(244)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureAdvancedTableDrivenPattern();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(245)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSheetMetalGussetFeature3([In] bool BOffset, [In] double DOffset, [In] bool BFlipOffsetSide, [In] int ProfDimType, [In] double DIndentDepth, [In] double DLength, [In] bool BUseAngle, [In] double DHeight, [In] double DAngle, [In] bool BFlipSides, [In] double DWidth, [In] double DThickness, [In] bool BDraft, [In] double DDraftAngle, [In] bool BInnerCornerFillet, [In] double DInnerCornerFilletRadius, [In] bool BOuterCornerFillet, [In] double DOuterCornerFilletRadius, [In] int GussetType, [In] bool BEdgeFillet, [In] double DEdgeFilletRadius, [In] bool BOverrideDoc, [In] bool BShowProfile, [In] bool BShowCenter);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(246)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFlattenSurface([In] int AccuracyFactor);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(247)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertMoveFace3([In] int MoveType, [In] bool ReverseDir, [In] double Angle, [In] double Distance, [In][MarshalAs(UnmanagedType.Struct)] object TranslationParams, [In][MarshalAs(UnmanagedType.Struct)] object RotationParams, [In] int EndConditionType, [In] double OffsetDistance);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(248)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object InsertCosmeticWeldBead2([In] int WeldMode, [In][MarshalAs(UnmanagedType.Struct)] object WeldFromFaceOrEdgeSet, [In][MarshalAs(UnmanagedType.Struct)] object WeldToFaceOrEdgeSet, [In] double WeldSize);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(249)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertStructuralWeldment5([In][MarshalAs(UnmanagedType.BStr)] string Path, [In] int ConnectedSegmentsOption, [In] bool AllowProtrusion, [In][MarshalAs(UnmanagedType.Struct)] object Groups, [In][MarshalAs(UnmanagedType.BStr)] string ConfigurationName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(250)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureChainPattern([In] int PitchMethod, [In] bool FlipDirection, [In] bool FillPath, [In] int Number, [In] double Spacing, [In] bool GroupOneFlipPlane, [In] bool GroupTwoChain, [In] bool GroupTwoFlipPlane, [In] int AlignMethod, [In] int Options);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(251)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertNetBlend2([In] short Type, [In] short NCurvesDir1, [In] short NCurvesDir2, [In] bool HasCenterline, [In] double TessTolFactor, [In] bool WantsSolid, [In] bool MergeBody, [In] bool FeatureScope, [In] bool AutoSelect, [In] bool Thin, [In] double Thickness1, [In] double Thickness2, [In] bool ReverseThickness, [In] short ThinSolidType, [In] bool UseSharedThickness, [In] bool CapEnds, [In] double EndThickness, [In] bool AutoFillet, [In] double FilletRadius, [In] bool ForceNonRational, [In] bool CreateSolid);
+
+    [DispId(252)]
+    bool SolidForTrim
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(252)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(252)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(254)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertFlattenSurface2([In] int AccuracyFactor, [In] bool ShouldUseTears);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(255)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object PreIntersect2([In] bool CapPlanar, [In] int RegionType);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(256)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertProtrusionSwept4([In] bool Propagate, [In] bool Alignment, [In] int TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] int StartMatchingType, [In] int EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] int ThinType, [In] int PathAlign, [In] bool Merge, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces, [In] bool CircularProfile, [In] double CircularProfileDiameter, [In] int Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(257)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertCutSwept5([In] bool Propagate, [In] bool Alignment, [In] int TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] int StartMatchingType, [In] int EndMatchingType, [In] bool IsThinBody, [In] double Thickness1, [In] double Thickness2, [In] int ThinType, [In] int PathAlign, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts, [In] bool CircularProfile, [In] double CircularProfileDiameter, [In] int Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(258)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertSweepSurface3([In] bool Propagate, [In] int TwistCtrlOption, [In] bool KeepTangency, [In] bool BAdvancedSmoothing, [In] int StartMatchingType, [In] int EndMatchingType, [In] int PathAlign, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] double TwistAngle, [In] bool BMergeSmoothFaces, [In] bool CircularProfile, [In] double CircularProfileDiameter, [In] int Direction);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(259)]
+    bool ExpandFeature([In][MarshalAs(UnmanagedType.IDispatch)] object Component, [In][MarshalAs(UnmanagedType.BStr)] string FeatureName, [In] int WhichPane);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(260)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureLinearPattern5([In] int Num1, [In] double Spacing1, [In] int Num2, [In] double Spacing2, [In] bool FlipDir1, [In] bool FlipDir2, [In][MarshalAs(UnmanagedType.BStr)] string DName1, [In][MarshalAs(UnmanagedType.BStr)] string DName2, [In] bool GeometryPattern, [In] bool VaryInstance, [In] bool HasOffset1, [In] bool HasOffset2, [In] bool CtrlByNum1, [In] bool CtrlByNum2, [In] bool FromCentroid1, [In] bool FromCentroid2, [In] bool RevOffset1, [In] bool RevOffset2, [In] double Offset1, [In] double Offset2, [In] bool D2PatternSeedOnly, [In] bool SyncSubAssemblies);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(261)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCircularPattern5([In] int Number, [In] double Spacing, [In] bool FlipDirection, [In][MarshalAs(UnmanagedType.BStr)] string DName, [In] bool GeometryPattern, [In] bool EqualSpacing, [In] bool VaryInstance, [In] bool SyncSubAssemblies, [In] bool BDir2, [In] bool BSymmetric, [In] int Number2, [In] double Spacing2, [In][MarshalAs(UnmanagedType.BStr)] string DName2, [In] bool EqualSpacing2);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(262)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertTableDrivenPattern2([In][MarshalAs(UnmanagedType.BStr)] string FileName, [In][MarshalAs(UnmanagedType.Struct)] object PointVar, [In] bool UseCentroid, [In] bool GeomPattern, [In] bool PropVisProps);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(263)]
+    void FeatureExtruRefSurface3([In] bool Sd, [In] bool Dir, [In] int StartCond, [In] double OffsetVal, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool CapEnd1, [In] bool CapEnd2, [In] bool DeleteOriginalFace, [In] bool KnitResult);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(264)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetSelectionSetFolder();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(265)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDerivedPattern2();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(266)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature FeatureCut4([In] bool Sd, [In] bool Flip, [In] bool Dir, [In] int T1, [In] int T2, [In] double D1, [In] double D2, [In] bool Dchk1, [In] bool Dchk2, [In] bool Ddir1, [In] bool Ddir2, [In] double Dang1, [In] double Dang2, [In] bool OffsetReverse1, [In] bool OffsetReverse2, [In] bool TranslateSurface1, [In] bool TranslateSurface2, [In] bool NormalCut, [In] bool UseFeatScope, [In] bool UseAutoSelect, [In] bool AssemblyFeatureScope, [In] bool AutoSelectComponents, [In] bool PropagateFeatureToParts, [In] int T0, [In] double StartOffset, [In] bool FlipStartOffset, [In] bool OptimizeGeometry);
+
+    [DispId(267)]
+    bool GroupComponentInstances
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(267)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(267)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(268)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertWrapFeature2([In] int Type, [In] double Thickness, [In] bool ReverseDir, [In] int Method, [In] int MeshFactor);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(269)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature AdvancedHole([In][MarshalAs(UnmanagedType.Struct)] object AdvancedHoleNearElementArray, [In][MarshalAs(UnmanagedType.Struct)] object AdvancedHoleFarElementArray, [In] bool UseBaselineDimensions, [In] bool IsCustomCallout, [MarshalAs(UnmanagedType.Struct)] out object ResultArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(270)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object PostSplitBody2([In][MarshalAs(UnmanagedType.Struct)] object BodiesToMark, [In] bool ConsumeCut, [In][MarshalAs(UnmanagedType.Struct)] object Origins, [In][MarshalAs(UnmanagedType.Struct)] object SavePaths, [In][MarshalAs(UnmanagedType.BStr)] string OverrideTemplateName);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(271)]
+    void AddSMNormalCutType([In] bool AutoPropagation, [In] bool Optimize, [In] bool BExtent);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(272)]
+    int AddSMNormalCut();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(273)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object FinishSMNormalCut();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(274)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertGroundPlane([In] bool ReverseDirection);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(275)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object InsertGlobalBoundingBox([In] int BBoxType, [In] bool IncludeHiddenBodies, [In] bool IncludeSurfaceBodies, out int Status);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(276)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertDeleteHoleForSurface();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(277)]
+    [return: MarshalAs(UnmanagedType.IDispatch)]
+    object GetSlicingData();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(278)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object InsertSlicing([In][MarshalAs(UnmanagedType.IDispatch)] object SlicingData, out int Errors);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(279)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature AdvancedHole2([In][MarshalAs(UnmanagedType.Struct)] object AdvancedHoleNearElementArray, [In][MarshalAs(UnmanagedType.Struct)] object AdvancedHoleFarElementArray, [In] bool UseBaselineDimensions, [In] bool IsCustomCallout, [In] bool IsDepthUptoTip, [MarshalAs(UnmanagedType.Struct)] out object ResultArray);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(280)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature CreateCoordinateSystemUsingNumericalValues([In] bool UseLocation, [In] double DeltaX, [In] double DeltaY, [In] double DeltaZ, [In] bool UseRotation, [In] double AngleX, [In] double AngleY, [In] double AngleZ);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(281)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetStructureSystemFolders();
+
+    [DispId(282)]
+    int ComponentPrimaryIdentifier
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(282)]
+        get;
+    }
+
+    [DispId(283)]
+    int ComponentSecondaryIdentifier
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(283)]
+        get;
+    }
+
+    [DispId(284)]
+    int ComponentTertiaryIdentifier
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(284)]
+        get;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(285)]
+    int SetComponentIdentifiers([In] int Primary, [In] int Secondary, [In] int Tertiary);
+
+    [DispId(286)]
+    bool HideComponentSingleConfigurationOrDisplayStateNames
+    {
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(286)]
+        get;
+        [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+        [DispId(286)]
+        [param: In]
+        set;
+    }
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(287)]
+    [return: MarshalAs(UnmanagedType.Struct)]
+    object GetCornerManagementFolders();
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(288)]
+    [return: MarshalAs(UnmanagedType.Interface)]
+    Feature InsertUntrimSurface2([In] int FaceUntrimType, [In] int EdgeUntrimType, [In] double Distance, [In] bool BMerge, [In] bool BTrimOppositeSide);
+
+    [MethodImpl(MethodImplOptions.InternalCall, MethodCodeType = MethodCodeType.Runtime)]
+    [DispId(289)]
+    int GetCreateFeatureErrors([MarshalAs(UnmanagedType.Struct)] out object Msgs, [MarshalAs(UnmanagedType.BStr)] out string FeatureTypeName);
+}
+#if false // Decompilation log
+'166' items in cache
+------------------
+Resolve: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+Found single assembly: 'mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\mscorlib.dll'
+------------------
+Resolve: 'Microsoft.Win32.Registry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'Microsoft.Win32.Registry, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\Microsoft.Win32.Registry.dll'
+------------------
+Resolve: 'System.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.dll'
+------------------
+Resolve: 'System.Security.Principal.Windows, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Principal.Windows, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Principal.Windows.dll'
+------------------
+Resolve: 'System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+Could not find by name: 'System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51'
+------------------
+Resolve: 'System.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.dll'
+------------------
+Resolve: 'System.Collections.NonGeneric, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections.NonGeneric, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.NonGeneric.dll'
+------------------
+Resolve: 'System.Collections.Concurrent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Collections.Concurrent, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Collections.Concurrent.dll'
+------------------
+Resolve: 'System.ObjectModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.ObjectModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.ObjectModel.dll'
+------------------
+Resolve: 'System.Console, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Console, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Console.dll'
+------------------
+Resolve: 'System.Runtime.InteropServices, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.InteropServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.InteropServices.dll'
+------------------
+Resolve: 'System.Diagnostics.Contracts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.Contracts, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.Contracts.dll'
+------------------
+Resolve: 'System.Diagnostics.StackTrace, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.StackTrace, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.StackTrace.dll'
+------------------
+Resolve: 'System.Diagnostics.Tracing, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Diagnostics.Tracing, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Diagnostics.Tracing.dll'
+------------------
+Resolve: 'System.IO.FileSystem.DriveInfo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.FileSystem.DriveInfo, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.FileSystem.DriveInfo.dll'
+------------------
+Resolve: 'System.IO.IsolatedStorage, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.IsolatedStorage, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.IsolatedStorage.dll'
+------------------
+Resolve: 'System.ComponentModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.ComponentModel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.ComponentModel.dll'
+------------------
+Resolve: 'System.Threading.Thread, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Thread, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Thread.dll'
+------------------
+Resolve: 'System.Reflection.Emit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.dll'
+------------------
+Resolve: 'System.Reflection.Emit.ILGeneration, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit.ILGeneration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.ILGeneration.dll'
+------------------
+Resolve: 'System.Reflection.Emit.Lightweight, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Emit.Lightweight, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Emit.Lightweight.dll'
+------------------
+Resolve: 'System.Reflection.Primitives, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Reflection.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Reflection.Primitives.dll'
+------------------
+Resolve: 'System.Resources.Writer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Resources.Writer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Resources.Writer.dll'
+------------------
+Resolve: 'System.Runtime.CompilerServices.VisualC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.CompilerServices.VisualC, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.CompilerServices.VisualC.dll'
+------------------
+Resolve: 'System.Runtime.Serialization.Formatters, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime.Serialization.Formatters, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.Serialization.Formatters.dll'
+------------------
+Resolve: 'System.Security.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.AccessControl.dll'
+------------------
+Resolve: 'System.IO.FileSystem.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.IO.FileSystem.AccessControl, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.IO.FileSystem.AccessControl.dll'
+------------------
+Resolve: 'System.Threading.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Could not find by name: 'System.Threading.AccessControl, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+------------------
+Resolve: 'System.Security.Claims, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Claims, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Claims.dll'
+------------------
+Resolve: 'System.Security.Cryptography, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Security.Cryptography, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Security.Cryptography.dll'
+------------------
+Resolve: 'System.Text.Encoding.Extensions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Text.Encoding.Extensions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Text.Encoding.Extensions.dll'
+------------------
+Resolve: 'System.Threading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.dll'
+------------------
+Resolve: 'System.Threading.Overlapped, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Overlapped, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Overlapped.dll'
+------------------
+Resolve: 'System.Threading.ThreadPool, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.ThreadPool, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.ThreadPool.dll'
+------------------
+Resolve: 'System.Threading.Tasks.Parallel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Threading.Tasks.Parallel, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+WARN: Version mismatch. Expected: '0.0.0.0', Got: '8.0.0.0'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Threading.Tasks.Parallel.dll'
+------------------
+Resolve: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Found single assembly: 'System.Runtime, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a'
+Load from: 'C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\8.0.11\ref\net8.0\System.Runtime.dll'
+#endif
